@@ -1,0 +1,17 @@
+<MKM version="2.0" imageFileUrl="file:///E:/local_work/%e5%89%8d%e7%ab%af%e8%ae%be%e8%ae%a1%e6%a1%86%e6%9e%b6/docs/assets/pics/district/top-bar.png">
+  <Marks>
+    <LengthMark direction="12" color="16711680" length="960" x="58" y="208"/>
+    <LengthMark direction="3" color="16711680" length="5" x="503" y="19"/>
+    <LengthMark direction="3" color="16711680" length="5" x="501" y="48"/>
+    <LengthMark direction="3" color="16711680" length="1" x="413" y="53"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="13948116" offsetX="26" offsetY="14" x="285" y="53"/>
+    <LengthMark direction="3" color="16711680" length="7" x="591" y="24"/>
+    <LengthMark direction="3" color="16711680" length="7" x="572" y="41"/>
+    <RectMark color="16711680" x="704" y="27" offsetX="314" offsetY="18"/>
+    <LengthMark direction="3" color="16711680" length="2" x="213" y="19"/>
+    <LengthMark direction="3" color="16711680" length="4" x="192" y="49"/>
+    <LengthMark direction="3" color="16711680" length="20" x="185" y="153"/>
+    <LengthMark direction="3" color="16711680" length="11" x="328" y="94"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="14703485" offsetX="51" offsetY="16" x="878" y="170"/>
+  </Marks>
+</MKM>

@@ -1,0 +1,201 @@
+/*全局*/
+body {
+	font-size:12px;
+	text-align:center;
+	line-height:1.2;
+	padding:0;
+	margin:0;
+	font-family:'Microsoft YaHei';
+}
+
+div,h1,h2,h3,h4,h5,h6,ol,ul,li,dl,dt,dd,form,input,select,textarea {
+	text-align:left;
+	padding:0;
+	margin:0;
+}
+
+input,select,textarea,table {
+	font-size:12px;
+	font-family:'Microsoft YaHei';
+}
+
+ol,ul {
+	list-style:none;
+}
+
+p {
+	padding:0;
+	margin:0;
+}
+
+img {
+	vertical-align:middle;
+	border:none;
+}
+
+/*align*/
+.textAlignC {
+	text-align:center;
+}
+
+/*width*/
+.width82 {
+	width:82px;
+}
+
+.width100 {
+	width:100px;
+}
+
+.width110 {
+	width:110px;
+}
+
+.width184 {
+	width:184px;
+}
+
+.width298 {
+	width:298px;
+}
+
+.width306 {
+	width:306px;
+}
+
+.width330 {
+	width:330px;
+}
+
+.width344 {
+	width:344px;
+}
+
+.width348 {
+	width:348px;
+}
+
+/*height*/
+.height24 {
+	height:24px;
+	line-height:24px;
+}
+
+.exampleWrap {
+	width:800px;
+	padding:15px;
+	border-radius:4px;
+	border:1px solid #e5e5e5;
+	margin:35px auto 0 auto;
+	box-shadow:1px 1px 2px #f0f0f0;
+}
+
+.exampleWrap h3 {
+	font-size:14px;
+}
+
+.exampleWrap h3,.exampleWrap p {
+	height:35px;
+	line-height:35px;
+}
+
+.exampleWrap .inner {
+	padding:0 0 15px 0;
+}
+
+a {
+	color:#000;
+	text-decoration:none;
+}
+
+a:hover,a:active {
+	color:#072;
+	text-decoration:underline;
+}
+/*tab4*/
+a.LWhiteA:link,a.LWhiteA:visited {
+	color:#c0dfc0;
+	text-decoration:none;
+}
+
+a.LWhiteA:hover {
+	color:#225e30;
+	text-decoration:none;
+}
+
+a.LWhiteAB:link,a.LWhiteAB:visited {
+	color:#c0dfc0;
+	text-decoration:underline;
+}
+
+a.LWhiteAB:hover {
+	color:#225e30;
+	text-decoration:underline;
+}
+
+/*icon tab3\4*/
+/*新鲜事*/
+.SQ_navIcon1 {
+	background:url(../images/SQSpr2.png) no-repeat 0 -312px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -312px;
+}
+/*日记*/
+.SQ_navIcon5 {
+	background:url(../images/SQSpr2.png) no-repeat 0 -389px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -389px;
+}
+/*站内信*/
+.SQ_navIcon10 {
+	background:url(../images/SQSpr2.png) no-repeat 0 -832px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -832px;
+}
+
+/*应用中心*/
+.SQ_navIcon7 {
+	background:url(../images/SQSpr2.png) no-repeat 0 -428px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -428px;
+}
+
+
+/*新鲜事灰*/
+.SQ_navIcon1Gray {
+	background:url(../images/SQSpr2.png) no-repeat 0 -713px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -713px;
+}
+/*日记灰*/
+.SQ_navIcon5Gray {
+	background:url(../images/SQSpr2.png) no-repeat 0 -733px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -733px;
+}
+/*站内信灰*/
+.SQ_navIcon10Gray {
+	background:url(../images/SQSpr2.png) no-repeat 0 -772px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -772px;
+}
+
+
+/*新鲜事儿白*/
+.SQ_navIcon1White {
+	background:url(../images/SQSpr2.png) no-repeat 0 -889px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -889px;
+}
+
+/*日记白*/
+.SQ_navIcon5White {
+	background:url(../images/SQSpr2.png) no-repeat 0 -909px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -909px;
+}
+
+/*应用中心白*/
+.SQ_navIcon7White {
+	background:url(../images/SQSpr2.png) no-repeat 0 -1046px;
+	_background:url(../images/SQSpr2.gif) no-repeat 0 -1046px;
+}
+
+.greenBgColor {
+	background:#469d52;
+}
+
+
+
+

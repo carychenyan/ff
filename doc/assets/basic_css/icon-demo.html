@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>原生网页表单集合</title>
+    <link href="style/public.css" rel="stylesheet" type="text/css" />
+    <link href="style/component.css" rel="stylesheet" type="text/css" />
+    <link href="style/skin.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    .tableSet td{border:1px solid #e3e3e3}
+    </style>
+</head>
+
+<body>
+    <div class="exampleWrap">
+        <table class="tableSet">
+            <!-- 可以在class中加入tableSet-inbox或tableSet-noborder分别适应不同的情况 -->
+            <!-- 有边框 -->
+            <thead>
+                <tr>
+                    <th>图标类型</th>
+                    <th>
+                        大 <em class="ft-bar">|</em>
+                        24px
+                    </th>
+                    <th>
+                        中 <em class="ft-bar">|</em>
+                        16px
+                    </th>
+                    <th>
+                        小
+                        <em class="ft-bar">|</em>
+                        12px
+                    </th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <!-- 表头可选 -->
+            <tbody>
+<!--                 <tr>
+                    <td>成功</td>
+                    <td></td>
+                    <td> <i class="icon_warning" title="成功"></i>
+                        class="icon_warning"
+                    </td>
+                    <td> <i class="icon_finishSmall" title="成功"></i>
+                        class="icon_finishSmall"
+                    </td>
+                    <td></td>
+                </tr> -->
+                <tr class="tableSet-split">
+                    <td>排序（升序）</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <!-- <i class="icon_editSmall" title="编辑"></i>class="icon_editSmall" -->
+                        <!-- <i class="icon_delSmall" title="删除">&#xF049;</i> -->
+                        <!-- <i class="icon_setSmall" title="设置">&#xF049;</i> -->
+                        <i class="icon_orderUpSmall" title="升序">&#xF049;</i>class="icon_orderDownSmall"
+                        <!-- <i class="icon_orderDownSmall" title="降序">&#xF049;</i> -->
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>排序（降序）</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i class="icon_orderDownSmall" title="降序"></i>class="icon_orderDownSmall"
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>置顶</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i class="icon_toUpSmall" title="置顶"></i>class="icon_toUpSmall"
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>取消置顶</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i class="icon_upCancel" title="取消置顶"></i>class="icon_upCancel"
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>设置</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i class="icon_setSmall" title="设置">&#xF049;</i>class="icon_setSmall"
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>删除</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i class="icon_delSmall" title="删除">&#xF049;</i>class="icon_delSmall"
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>编辑</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <i class="icon_editSmall" title="编辑">&#xF049;</i>class="icon_editSmall"
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>错误</td>
+                    <td></td>
+                    <td><i class="icon_error" title="错误">&#xF049;</i>class="icon_error"</td>
+                    <td><i class="icon_errorSmall" title="错误">&#xF049;</i>class="icon_errorSmall"</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>警告</td>
+                    <td></td>
+                    <td><i class="icon_warning" title="警告">&#xF049;</i>class="icon_warning"</td>
+                    <td><i class="icon_warningSmall" title="警告">&#xF049;</i>class="icon_warningSmall"</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>完成</td>
+                    <td></td>
+                    <td><i class="icon_finish" title="完成">&#xF049;</i>class="icon_finish"</td>
+                    <td><i class="icon_finishSmall" title="完成">&#xF049;</i>class="icon_finishSmall"</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>信息</td>
+                    <td></td>
+                    <td><i class="icon_hint" title="信息">&#xF049;</i>class="icon_hint"</td>
+                    <td><i class="icon_hintSmall" title="信息">&#xF049;</i>class="icon_hintSmall"</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>疑问</td>
+                    <td></td>
+                    <td><i class="icon_query" title="疑问">&#xF049;</i>class="icon_query"</td>
+                    <td><i class="icon_querySmall" title="疑问">&#xF049;</i>class="icon_querySmall"</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>二级菜单更多</td>
+                    <td></td>
+                    <td></td>
+                    <td><i class="icon_menuSubSmall" title="more">&#xF049;</i>class="icon_menuSubSmall"</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>home</td>
+                    <td></td>
+                    <td></td>
+                    <td><i class="icon_home" title="home">&#xF049;</i>class="icon_home"</td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+<!--             <tfoot>
+                <tr>
+                    <td colspan="7">表尾数据</td>
+                </tr>
+            </tfoot> -->
+            <!-- 表尾可选 --> </table>
+    </div>
+</body>
+</html>

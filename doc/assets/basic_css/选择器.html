@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学校管理后台-列表页</title>
+    <link href="style/xuexiao.css" rel="stylesheet" type="text/css" />
+    <link href="style/component.css" rel="stylesheet" type="text/css" />
+    <link href="style/layout.css" rel="stylesheet" type="text/css" />
+    <link href="style/skin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar width226 floatL">
+            <div class="schLogo">
+                <img src="images/school_logo.png" alt="" />
+            </div>
+            <ul class="tab4Menu manageList font14">
+                <li class="menuCell tabMenuCurrent">
+                    <a href="#" title="学校资料" target="_blank"> <i class="icon_schInfo marginL15"></i>
+                        学校资料
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="信息管理" target="_blank"> <i class="icon_infoManageGray marginL15"></i>
+                        信息管理
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="班级教师管理" target="_blank">
+                        <i class="icon_teacherManageGray marginL15"></i>
+                        班级教师管理
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="互动管理" target="_blank">
+                        <i class="icon_interactManageGray marginL15"></i>
+                        互动管理
+                    </a>
+                </li>
+                <li class="menuCell tabMenuHover">
+                    <a href="#" title="应用调查" target="_blank">
+                        <i class="icon_plusGray floatR" title="展开"></i>
+                        <i class="icon_appSurveyGray marginL15"></i>
+                        应用调查
+                    </a>
+                    <ul class="secondaryMenu font12">
+                        <li class="menuCell tabMenuCurrent">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                学生活跃度统计
+                            </a>
+                        </li>
+                        <li class="menuCell tabMenuHover">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menuCell tabSecondaryMenuCurrent">
+                    <a href="#" title="数据统计" target="_blank">
+                        <i class="icon_minusGray floatR" title="收起"></i>
+                        <i class="icon_dataStatisticsGray marginL15"></i>
+                        数据统计
+                    </a>
+                    <ul class="secondaryMenu font12">
+                        <li class="menuCell tabMenuCurrent">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                学生活跃度统计
+                            </a>
+                        </li>
+                        <li class="menuCell tabMenuHover">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                        <li class="menuCell">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main floatR" style="width:100%">
+            <div class="mainLeft">
+                <div class="manageFunc font14">
+                    <a href="/School_Home/index/school/121502" title="退出帐号" class="exitA floatR">
+                        <i class="icon_exit"></i>
+                        退出帐号
+                    </a>
+                    <ul class="mainNav floatL">
+                        <li class="">
+                            <a href="/School_Home/index/school/121502" target="_blank">湖北省-武汉市-东湖开发区-长江数字学校</a>
+                        </li>
+                    </ul>
+                    <div class="manageFuncDropdown floatR">
+                        <div class="customDropdownWrap customDropdownStyle2">
+                            <span class="dropdown_currentValue">
+                                <span class="dropdownTxt">
+                                    <img src="http://dev-images.dodoedu.com/image/20131384930806-15810-5211-7628-64.jpg" width="18" class="marginR5">wuya001</span>
+                                <i class="icon_downArrStyle2"></i>
+                            </span>
+                            <div class="dropdownItem width150">
+                                <ul class="dropdownItemUl">
+                                    <li class="dropdownCell">
+                                        <a href="/School_Home/index/school/121502" title="学校主页" target="_blank" class="displayBlock">学校主页</a>
+                                    </li>
+                                    <li class="dropdownCell">
+                                        <a href="http://dev.dodoedu.com" title="多多社区" target="_blank" class="displayBlock">多多社区</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    =
+                    <div class="clear"></div>
+                </div>
+                <div class="page-info">
+                    <div class="pageHeader">
+                        <h2>添加教师</h2>
+                        <span class="funIntro">栏目功能描述</span>
+                    </div>
+                </div>
+                <div class="content">
+            <div class="formWrap">
+
+   <form class="formStyle" name="addTeacher_form" method="post" action="/School_Admin_Class/addTeacherPost/school/121502" id="addTeacher_form">
+    <input type="hidden" name="school_id" value="121502">
+    <fieldset>
+        <legend></legend>
+
+        <div class="formStyle-item">
+            <label for="" class="formStyle-label">
+                <span class="formStyle-required">*</span>登录账号
+            </label>
+            <input class="customForm_inputBoxDefault customForm_txtInput grid_col8" type="text" id="user_name" name="user_name" sucmsg="ok" placeholder="多多社区账号" datatype="*"><span class="formStyle-other"></span>
+            <p class="formStyle-explain">
+            </p>
+        </div>
+        <div class="formStyle-item">
+            <label for="" class="formStyle-label">
+                <span class="formStyle-required">*</span>登录密码
+            </label>
+            <input class="customForm_inputBoxDefault customForm_txtInput grid_col8" type="password" id="password" name="password" sucmsg="ok" placeholder="登录密码6-20位" datatype="*6-20"><span class="formStyle-other"></span>
+            <p class="formStyle-explain">
+            </p>
+        </div>
+        <div class="formStyle-item">
+            <label for="" class="formStyle-label">
+                <span class="formStyle-required">*</span>老师姓名
+            </label>
+            <input class="customForm_inputBoxDefault customForm_txtInput grid_col8" type="text" id="real_name" name="real_name" sucmsg="ok" placeholder="老师姓名" datatype="*"><span class="formStyle-other"></span>
+            <p class="formStyle-explain">
+            </p>
+        </div>
+        <div class="formStyle-item">
+            <label for="" class="formStyle-label">
+                <span class="formStyle-required">*</span>任课科目
+            </label>
+            <div class="itemSelectorWarp">
+                <span class = "customTag colourstyle3 font12" ><a href=""><label for="stu_201">语文 </label></a></span><span class = "customTag colourstyle4 font12" ><a href=""><label for="stu_201">数学 </label></a></span><span class = "customTag colourstyle2 font12" ><a href=""><label for="stu_201">生物 </label></a></span><span class = "customTag colourstyle1 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle5 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle6 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle7 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle8 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle9 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle10 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle10 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle10 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle10 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle10 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle10 font12" ><a href=""><label for="stu_201">科学 </label></a></span><span class = "customTag colourstyle10 font12" ><a href=""><label for="stu_201">科学 </label></a></span>
+                <!-- 自定义标签的样式为 （colourstyle*的随机数，0到10） -->
+            </div>
+                            <!-- <span class = "customTag disSelectStyle font12" ><label for="stu_201">思想与品德教育</label></span> -->
+            <div class="itemList">
+                <ul>
+                    <li><a href="" class = "customTag disSelectStyle font12">思想与品德教育</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">体育</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">化学</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">生理</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">政治</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">政治</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">政治</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">政治</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">政治</a></li>
+                    <li><a href="" class = "customTag disSelectStyle font12">政治</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="formStyle-item">
+            <label for="" class="formStyle-label">
+                <span class="formStyle-required">*</span>老师性别
+            </label>
+            <select name="sex" id="sex" datatype="*">
+                <option value="">请选择性别</option>
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+
+<span class="formStyle-other"></span>
+            <p class="formStyle-explain">
+            </p>
+        </div>
+        <div class="formStyle-item">
+            <label for="" class="formStyle-label">
+                <span class="formStyle-required">*</span>联系手机
+            </label>
+            <input class="customForm_inputBoxDefault customForm_txtInput grid_col8" type="text" id="mobile" name="mobile" placeholder="联系手机" datatype="m"><span class="formStyle-other"></span>
+            <p class="formStyle-explain">
+            </p>
+        </div>
+        <div class="formStyle-item">
+            <label for="" class="formStyle-label">
+                <span class="formStyle-required"></span>电子邮箱
+            </label>
+            <input class="customForm_inputBoxDefault customForm_txtInput grid_col8" type="text" id="email" name="email" placeholder="2323232@qq.com"><span class="formStyle-other"></span>
+            <p class="formStyle-explain">
+            </p>
+        </div>
+
+        <div class="formStyle-item">
+            <input type="submit" class="customBtn colourDarkBlue" value="确定">
+            <a class="customBtn colourLightGray" href="/School_Admin_Class/schoolTeacher/school/121502">取消</a>
+        </div>
+    </fieldset>
+</form>
+</div>
+<script type="text/javascript">
+    $(function(){
+        Form_V('addTeacher_form');
+      });
+</script>            </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    
+<script src="script/jquery-1.6.min.js"></script>
+<script src="script/tab.js"></script>
+<script src="script/tableOrder.js"></script>
+<script src="script/dropdownlist.js"></script>
+<script src="script/indexPage.js"></script>
+
+</body>
+</html>

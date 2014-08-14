@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>原生网页表单集合</title>
+    <link href="style/public.css" rel="stylesheet" type="text/css" />
+    <link href="style/component.css" rel="stylesheet" type="text/css" />
+    <link href="style/skin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--文本框的几种状态-->
+    <h2 style="text-align:center;">IE6,7,8不支持阴影。</h2>
+    <div class="exampleWrap">
+        <h3>不可点，失效或程序生成的数据</h3>
+        <span class="customForm_inputBoxDisabled customForm_txtInput width330">不可点，失效或程序生成的数据</span>
+        <h3>默认输入框，未有任何操作</h3>
+        <input name="" type="text" class="customForm_inputBoxDefault customForm_txtInput width330" value="默认输入框，未有任何操作" />
+        <h3>有焦点，正在输入,两种样式</h3>
+        <input name="" type="text" class="customForm_inputBoxGetFocus1 customForm_txtInput  width330" value="有焦点，正在输入，样式一" />
+        <!-- <input name="" type="text" class="customForm_inputBoxGetFocus2 customForm_txtInput width330" value="有焦点，正在输入，样式二" />
+        -->
+        <h3>完成输入，焦点离开</h3>
+        <input name="" type="text" class="customForm_inputBoxFinish customForm_txtInput width330" value="完成输入，焦点离开" />
+        <h3>输入有错误或不合法,两种样式</h3>
+        <input name="" type="text" class="customForm_inputBoxError1 customForm_txtInput width330" value="输入有错误或不合法，样式一" />
+        <input name="" type="text" class="customForm_inputBoxError2 customForm_txtInput width330" value="输入有错误或不合法，样式二" />
+    </div>
+
+    <div class="exampleWrap">
+        <h3>带有按钮功能的输入框</h3>
+        <div class="customForm_controlInputBox customForm_txtInput width330">
+            <input name="" type="text" class="txtInput width306 floatL" value="带有按钮功能的输入框" />
+            <div class="icon_enterControl floatR"></div>
+        </div>
+        <p>-----分隔线------</p>
+        <div class="customForm_controlInputBox customForm_txtInput width330">
+            <input name="" type="text" class="txtInput width306 floatL" value="部分功能，可以支持类似iphone的功能" />
+            <div class="icon_forkControl floatR"></div>
+        </div>
+        <p>-----分隔线------</p>
+        <div class="customForm_searchTxtInput customForm_searchInputBoxDisabled width344">
+            <input name="" type="text" class="txtInput width306 floatL" readonly="readonly" value="失效" />
+            <label class="floatR searchBtn">
+                <input name="" type="submit" value="" class="icon_magnifier" />
+            </label>
+        </div>
+        <p>-----分隔线------</p>
+        <div class="customForm_searchTxtInput customForm_searchInputBoxGetFocus width344">
+            <input name="" type="text" class="txtInput width306 floatL" value="功能的输入" />
+            <label class="floatR searchBtn">
+                <input name="" type="submit" value="" class="icon_magnifier" />
+            </label>
+        </div>
+        <p>-----分隔线------</p>
+        <div class="customForm_searchTxtInput customForm_searchInputBoxFinish width344">
+            <input name="" type="text" class="txtInput width306 floatL" value="点击按钮" />
+            <label class="floatR searchBtn">
+                <input name="" type="submit" value="" class="icon_magnifier" />
+            </label>
+        </div>
+    </div>
+    <div class="exampleWrap" style="height:80px;">
+        <h3>下拉框和自动补全的样式（不依赖JS）</h3>
+        <div class="select">
+            <div>
+                <select>
+                    <option>看见效果了吧</option>
+                    <option>看见效果了吧</option>
+                    <option>看见效果了吧</option>
+                </select>
+            </div>
+<!--             <select>
+                <option value ="volvo">Volvo</option>
+                <option value ="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select> -->
+             </div>
+    </div>
+    <div class="exampleWrap" style="height:120px;">
+        <h3>下拉框和自动补全的样式（不依赖JS）</h3>
+         <form>
+             <select size="3" id="select3" onchange="alert(this.options[this.selectedIndex].value)">
+
+                 <option value="value 1">Item 1</option>
+
+                 <option value="value 2">Item 2</option>
+
+                 <option value="value 3" selected="">Item 3</option>
+
+                 <option value="value 4">Item 4</option>
+
+                 <option value="value 5">Item 5</option>
+
+             </select>
+         </form>
+    </div>
+
+    <div class="exampleWrap">
+        <div class="checkbox" checked="true" style="background-color: rgb(0, 0, 255);"></div>
+    </div>
+
+    <div class="exampleWrap">
+            <p>-----支持文本域拖放------</p>
+            <textarea name="" cols="" rows="5" class="customForm_textarea customForm_inputBoxDefault width330">多行文本，支持文本域拖放</textarea>
+            <p>-----不支持文本域拖放------</p>
+            <textarea name="" cols="" rows="5" class="customForm_textarea banResize customForm_inputBoxDefault width330">多行文本，不支持文本域拖放</textarea>
+    </div>
+</body>
+</html>

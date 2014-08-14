@@ -1,0 +1,74 @@
+/*==新增表格样式==*/
+/* 默认样式*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th {
+/*font-weight: bold;*/
+	font-weight: normal;
+}
+
+.tableSet {
+	border-collapse: collapse;
+	border: 1px solid #eaeaea;
+	width: 100%;
+	font-size: 14px;
+	text-align: left;
+}
+
+.tableSet thead {
+	color: #666;
+	background-color: #ececec;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f3f3f3');
+	background: -webkit-gradient(linear,left top,left bottom,from(#f7f7f7),to(#f3f3f3));
+	background: -moz-linear-gradient(top,#f7f7f7,#f3f3f3);
+	background: -o-linear-gradient(top,#f7f7f7,#f3f3f3);
+	background: linear-gradient(top,#f7f7f7,#ececec);
+}
+
+.tableSet thead tr {
+	color: #666;
+	text-shadow: 0px 1px rgba(255,255,255,.3);
+}
+
+.tableSet thead tr th {
+	border: 1px solid #e3e3e3;
+}
+
+.tableSet tr {
+	color: #333;
+}
+
+.tableSet th {
+	padding: 7px 9px;
+	border-bottom: 1px solid #e3e3e3;
+	text-align: left;
+}
+
+.tableSet td {
+	padding: 8px 9px 7px;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.tableSet tr:nth-child(even), .tableSet-split, .tableSet-hover {
+	background-color: #FBFBFB;
+}
+
+.tableSet tbody tr:hover {
+	background-color: #f2f7ff;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+}
+/*无边框*/
+.tableSet-noborder, .tableSet-noborder td, .tableSet-noborder tr, .tableSet-noborder th {
+	border: 0;
+	outline: 0;
+}
+/*底部分割线*/
+.tableSet-inbox {
+	border: 0;
+	border-bottom: 2px solid #dfdfdf;
+	outline: 0;
+}

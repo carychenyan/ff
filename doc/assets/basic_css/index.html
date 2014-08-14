@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学校管理后台-列表页</title>
+<link href="style/xuexiao.css" rel="stylesheet" type="text/css" />
+<link href="style/component.css" rel="stylesheet" type="text/css" />
+<link href="style/layout.css" rel="stylesheet" type="text/css" />
+<link href="style/skin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="sidebar width226 floatL">
+    	<div class="schLogo"><img src="images/school_logo.png" alt="" /></div>
+        <ul class="tab4Menu manageList font14">
+        	<li class="menuCell tabMenuCurrent">
+                <a href="#" title="学校资料" target="_blank"><i class="icon_schInfo marginL15"></i>学校资料</a>
+            </li>
+            <li class="menuCell">
+                <a href="#" title="信息管理" target="_blank"><i class="icon_infoManageGray marginL15"></i>信息管理</a>
+            </li>
+            <li class="menuCell">
+                <a href="#" title="班级教师管理" target="_blank"><i class="icon_teacherManageGray marginL15"></i>班级教师管理</a>
+            </li>
+            <li class="menuCell">
+                <a href="#" title="互动管理" target="_blank"><i class="icon_interactManageGray marginL15"></i>互动管理</a>
+            </li>
+            <li class="menuCell tabMenuHover">
+                <a href="#" title="应用调查" target="_blank"><i class="icon_plusGray floatR" title="展开"></i><i class="icon_appSurveyGray marginL15"></i>应用调查</a>
+                <ul class="secondaryMenu font12">
+                	<li class="menuCell tabMenuCurrent"><a href="#" title="数据统计" target="_blank" class="grayA"><span class="itemSymbol">■</span>学生活跃度统计</a></li>
+                	<li class="menuCell tabMenuHover"><a href="#" title="数据统计" target="_blank" class="grayA"><span class="itemSymbol">■</span>教学情况</a></li>
+                </ul>
+            </li>
+            <li class="menuCell tabSecondaryMenuCurrent">
+                <a href="#" title="数据统计" target="_blank"><i class="icon_minusGray floatR" title="收起"></i><i class="icon_dataStatisticsGray marginL15"></i>数据统计</a>
+                <ul class="secondaryMenu font12">
+                	<li class="menuCell tabMenuCurrent"><a href="#" title="数据统计" target="_blank" class="grayA"><span class="itemSymbol">■</span>学生活跃度统计</a></li>
+                	<li class="menuCell tabMenuHover"><a href="#" title="数据统计" target="_blank" class="grayA"><span class="itemSymbol">■</span>教学情况</a></li>
+                    <li class="menuCell"><a href="#" title="数据统计" target="_blank" class="grayA"><span class="itemSymbol">■</span>教学情况</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="main floatR" style="width:100%">
+        <div style="margin-left:226px;">
+        	<div class="manageFunc font14">
+                <a href="" title="" class="exitA floatR"><i class="icon_exit"></i>退出帐号</a>
+                <ul class="mainNav floatL">
+                      <li class=""><a href="/">武汉中学</a></li>
+                </ul>
+                <div class="manageFuncDropdown floatR">
+            	<div class="customDropdownWrap customDropdownStyle2 customDropdown1MouseOver">
+                    <span class="dropdown_currentValue"><span class="dropdownTxt"><img src="images/userfaceS5.jpg" width="18" class="marginR5" />李校长</span><i class="icon_downArrStyle2"></i></span>
+                    <div class="dropdownItem width150" style="visibility:hidden;">
+                        <ul class="dropdownItemUl">
+                            <li class="dropdownCell"><a href="" title="" class="displayBlock">系统设置</a></li>
+                            <li class="dropdownCell"><a href="" title="" class="displayBlock">权限管理</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        	<div class="schHeader">
+            	<div class="schLogoGra"><img src="images/school_logoGra.png" alt="" /></div>
+                <div class="schName">
+                	<h1>武汉市小学</h1>
+                    <p>官网地址：<a href="" title="" target="_blank" class="grayA">http://school.dodoedu.com/six-middleschool/</a></p>
+                </div>
+            </div>
+            <div class="listCon">
+            	<div class="title">
+                	<h2 class="floatL">班级列表</h2>
+                	<form action="" method="get" class="searchWrap floatR">
+                    	<div class="customForm_searchTxtInput customForm_searchInputBoxGetFocus width209"><input name="" type="text" class="txtInput width172 floatL" value="" /><label class="floatR searchBtn"><input name="" type="submit" value="" class="icon_magnifier" /></label></div>
+                    </form>
+                    <div class="clear"></div>
+                </div>
+    		</div>
+            <div class="content">
+            <table class="tableSet" id="tableTest">
+            <!-- 可以在class中加入tableSet-inbox或tableSet-noborder分别适应不同的情况 -->
+            <!-- 有边框 -->
+           <thead>
+                <tr>
+                    <th isAsc="true" isInt="true" id="createTime" isOrder="true" thIndex="0">创建时间</th>
+                    <th class="order"  isAsc="true" id="name" isOrder="true" thIndex="1">
+                        名称 <em class="ft-bar">|</em>
+                        交易号<i class="orderUp"></i>
+                    </th>
+                    <th isAsc="true" isInt="false" id="Th1" isOrder="true" thIndex="2">对方</th>
+                    <th class="order" isAsc="true" isInt="true" id="Th2" isOrder="true" thIndex="3">
+                        金额 <em class="ft-bar">|</em>
+                        明细<i class="orderDown"></i>
+                    </th>
+                    <th>状态</th>
+                    <th class="order">操作<i class="orderNone"></i></th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <!-- 表头可选 -->
+            <tbody>
+                <tr>
+                    <td>2013-10-11</td>
+                    <td>DDa3ta</td>
+                    <td>Lucy</td>
+                    <td>1312</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="tableSet-split">
+                    <td>2014-10-11</td>
+                    <td>DDa3ta</td>
+                    <td>Lucy1</td>
+                    <td>312</td>
+                    <td>SAD7ata</td>
+                    <td>!!Da8ta</td>
+                    <td>+AADa9ta</td>
+                </tr>
+                <tr>
+                 <td>2014-11-11</td>
+                    <td>02DDa3ta</td>
+                    <td>0Lucy</td>
+                    <td>054</td>
+                    <td>SAD7ata</td>
+                    <td>!!Da8ta</td>
+                    <td>+AADa9ta</td>
+                </tr>
+                <tr class="tableSet-split">
+                    <td>2011-10-11</td>
+                    <td>32</td>
+                    <td>11224</td>
+                    <td>232</td>
+                    <td>0</td>
+                    <td>05</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>2014-10-12</td>
+                    <td>Data</td>
+                    <td>Olya</td>
+                    <td>73</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                    <td>Data</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">表尾数据</td>
+                </tr>
+            </tfoot>
+            <!-- 表尾可选 --> 
+        </table>
+            </div>
+            <div class="footer">
+                <div class="footerL floatL">版权所有：多多社区</div>
+                <div class="footerR floatR">服务邮箱：services@dodoedu.com 客服热线：400-8866-561 鄂ICP备13014028号-1</div>
+                <div class="clear"></div>
+            </div>
+    </div>
+    </div>
+    
+    <div class="clear"></div>
+</div>
+    <script src="script/jquery-1.6.min.js"></script>
+    <script src="script/tab.js"></script>
+    <script src="script/tableOrder.js"></script>
+    <script src="script/dropdownlist.js"></script>
+    <script src="script/indexPage.js"></script>
+    
+</body>
+</html>

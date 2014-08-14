@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学校管理后台-列表页</title>
+    <link href="style/xuexiao.css" rel="stylesheet" type="text/css" />
+    <link href="style/component.css" rel="stylesheet" type="text/css" />
+    <link href="style/layout.css" rel="stylesheet" type="text/css" />
+    <link href="style/skin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar width226 floatL">
+            <div class="schLogo">
+                <img src="images/school_logo.png" alt="" />
+            </div>
+            <ul class="tab4Menu manageList font14">
+                <li class="menuCell tabMenuCurrent">
+                    <a href="#" title="学校资料" target="_blank"> <i class="icon_schInfo marginL15"></i>
+                        学校资料
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="信息管理" target="_blank"> <i class="icon_infoManageGray marginL15"></i>
+                        信息管理
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="班级教师管理" target="_blank">
+                        <i class="icon_teacherManageGray marginL15"></i>
+                        班级教师管理
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="互动管理" target="_blank">
+                        <i class="icon_interactManageGray marginL15"></i>
+                        互动管理
+                    </a>
+                </li>
+                <li class="menuCell tabMenuHover">
+                    <a href="#" title="应用调查" target="_blank">
+                        <i class="icon_plusGray floatR" title="展开"></i>
+                        <i class="icon_appSurveyGray marginL15"></i>
+                        应用调查
+                    </a>
+                    <ul class="secondaryMenu font12">
+                        <li class="menuCell tabMenuCurrent">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                学生活跃度统计
+                            </a>
+                        </li>
+                        <li class="menuCell tabMenuHover">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menuCell tabSecondaryMenuCurrent">
+                    <a href="#" title="数据统计" target="_blank">
+                        <i class="icon_minusGray floatR" title="收起"></i>
+                        <i class="icon_dataStatisticsGray marginL15"></i>
+                        数据统计
+                    </a>
+                    <ul class="secondaryMenu font12">
+                        <li class="menuCell tabMenuCurrent">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                学生活跃度统计
+                            </a>
+                        </li>
+                        <li class="menuCell tabMenuHover">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                        <li class="menuCell">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main floatR" style="width:100%">
+            <div style="margin-left:226px;">
+                <div class="manageFunc font14">
+                    <a href="" title="" class="exitA floatR">
+                        <i class="icon_exit"></i>
+                        退出帐号
+                    </a>
+                    <ul class="mainNav floatL">
+                        <li class="">
+                            <a href="/">湖北省-武汉市-洪山区-武汉中学<span class="betaLabel">248</span></a>
+                        </li>
+                    </ul>
+                    <div class="manageFuncDropdown floatR">
+                        <div class="customDropdownWrap customDropdownStyle2 customDropdown1MouseOver">
+                            <span class="dropdown_currentValue">
+                                <span class="dropdownTxt">
+                                    <img src="images/userfaceS5.jpg" width="18" class="marginR5" />
+                                    李校长
+                                </span>
+                                <i class="icon_downArrStyle2"></i>
+                            </span>
+                            <div class="dropdownItem width150" style="visibility:hidden;">
+                                <ul class="dropdownItemUl">
+                                    <li class="dropdownCell">
+                                        <a href="" title="" class="displayBlock">系统设置</a>
+                                    </li>
+                                    <li class="dropdownCell">
+                                        <a href="" title="" class="displayBlock">权限管理</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="page-info">
+                    <div id="page-actions">
+                        <ul id="breadcrumbs">
+                            <li class="disabled"><i class="icon_home"></i>当前位置</li>
+                            <li class="arrowDivder"><i class="icon_menuSubSmall"></i></li>
+                            <li>
+                                <a href="/settings/personal" title="Settings">班级管理</a>
+                            </li>
+                            <li class="arrowDivder"><i class="icon_menuSubSmall"></i></li>
+                            <li>
+                                <a href="https://asa1230.positionly.com/settings/subscribe" title="Billing Information">成员管理</a>
+                            </li>
+                        </ul>
+                        <!-- /breadcrumbs -->
+                        <div id="actions"></div>
+                        <!-- /actions --> </div>
+                    <div class="pageHeader">
+                        <h2>成员管理</h2>
+                    </div>
+                </div>
+                <!-- /page-info -->
+                <div class="flashMessageWrap"><div class="flashMessage error"><p><i class="icon_warningSmall"></i>当前数据错误！</p></div></div>
+                <div class="flashMessageWrap"><div class="flashMessage alertInfo"><p><i class="icon_hintSmall"></i>请输入相关信息后，才能继续</p></div></div>
+                <!-- /page-info-end -->
+                <!-- /main-content -->
+                <div class="content">
+                    <form class="formStyle" name="" method="post" action="#" id="">
+                        <fieldset>
+                            <legend>表单标题</legend>
+
+                            <div class="formStyle-item formStyle-item-error width320">
+                                <label for="" class="formStyle-label">表单项文本</label>
+                                <p class="formStyle-text">一个个文字文字</div>
+
+                                <div class="formStyle-item">
+                                    <label for="" class="formStyle-label">
+                                        <span class="formStyle-required">*</span>
+                                        表单项文本
+                                    </label>
+                                    <input class="customForm_inputBoxDefault customForm_txtInput width320" type="text">
+                                    <span class="formStyle-other">
+                                        <a href="#">添加备注</a>
+                                    </span>
+                                    <p class="formStyle-explain">默认文案。</p>
+                                </div>
+
+                                <div class="formStyle-item formStyle-item-error">
+                                    <label for="" class="formStyle-label">表单项文本</label>
+                                    <input class="customForm_inputBoxError2 customForm_txtInput width320" type="text">
+                                    <span class="formStyle-other">
+                                        <a href="#">表单项其他</a>
+                                    </span>
+                                    <p class="formStyle-explain formStyle-tiptext formStyle-tiptext-error width320">
+                                        <i class="icon_errorSmall" title="出错">&#xF045;</i>
+                                        此在DOM上保存属性值，请使用data-xxx的形式。
+                                    </p>
+                                </div>
+
+                                <div class="formStyle-item formStyle-item-error formStyle-item-focus">
+                                    <label for="" class="formStyle-label">表单项文本</label>
+                                    <input class="customForm_inputBoxError1 customForm_txtInput width320" type="text">
+                                    <span class="formStyle-other">
+                                        <a href="#">表单项其他</a>
+                                    </span>
+                                    <p class="formStyle-explain formStyle-tiptext formStyle-tiptext-error">
+                                        <i class="icon_warningSmall" title="出错">&#xF045;</i>
+                                        formStyle-item-focus 的效果。
+                                    </p>
+                                </div>
+
+                                <div class="formStyle-item formStyle-item-success">
+                                    <label for="" class="formStyle-label">表单项文本</label>
+                                    <textarea class="customForm_textarea customForm_inputBoxDefault width320">一二三四五六七八九十</textarea>
+                                    <p class="formStyle-explain formStyle-tiptext formStyle-tiptext-success">
+                                        <i class="icon_finishSmall" title="成功">&#xF049;</i>
+                                        成功文案。
+                                    </p>
+                                </div>
+
+                                <div class="formStyle-item">
+                                    <label for="" class="formStyle-label ">下拉选择</label>
+                                    <!-- style="opacity: 0.001; position: absolute; top: 0px; left: 0px; display: block;" -->
+                                    <select id="province" name="province">
+                                        <option value="">请选择</option>
+                                        <option value="北京">北京</option>
+                                        <option value="上海">上海</option>
+                                        <option value="天津">天津</option>
+                                        <option value="浙江">浙江</option>
+                                    </select>
+                                    <p class="formStyle-explain">更多地区即将开通，敬请期待。</p>
+                                </div>
+                                <div class="formStyle-item ">
+                                        <label for="" class="formStyle-label ">学校标志</label>
+                                        <div class="changePicWrap" >
+                                            <span class="avatar">
+                                                <img alt="Missing" height="70" src="images/school_logoGra.gif" width="70">
+                                            </span>
+                                        <div class="uploadBtnWarp">
+                                          <strong>设置学校LOGO</strong>
+                                          <p>拥有完整清晰的图标，是体现学校专业、有品质的一个小细节。赶快上传一张吧~</p>
+                                          <span class="fieldWrap">
+                                            <span>
+                                              <a href="" title="" class="customBtn colourLightGray">选择图片</a>
+                                            </span>
+                                          </span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formStyle-item">
+                                    <label for="" class="formStyle-label formStyle-label-reset ">不可用input</label>
+                                    <input class="customForm_inputBoxDisabled customForm_txtInput width320" type="text" disabled>
+                                    <p class="formStyle-explain">目前不可用</p>
+                                </div>
+
+                                <div class="formStyle-item">
+                                    <label for="" class="formStyle-label formStyle-label-reset ">不可用input</label>
+                                    <input class="customForm_inputBoxDisabled customForm_txtInput width320" type="text" disabled>
+                                    <p class="formStyle-explain">目前不可用</p>
+                                </div>
+
+                                <div class="formStyle-item">
+                                    <label for="" class="formStyle-label">验证码</label>
+                                    <input class="customForm_inputBoxDefault customForm_txtInput" type="text" data-explain="请输入右图中字符，不区分大小写。" maxlength="4" autocomplete="off" value="" name="fourcode">
+                                    <img class="formStyle-checkcode-imgcode-img" align="absMiddle" alt="请输入您看到的内容" src="https://omeo.alipay.com/service/checkcode?sessionID=82012ab6b1f4ed9e675fb9092a25cb3b&r=0.9321065918075809"  title="点击刷新图片校验码">
+                                    <a href="#">看不清，换一张</a>
+                                    <div class="formStyle-explain">请输入右图中字符，不区分大小写。</div>
+                                </div>
+
+                                <div class="formStyle-item">
+                                    <label for="test">
+                                        <input class="formStyle-checkbox" id="test" value="" type="checkbox">我已阅读并接受自主缴费服务协议</label>
+                                </div>
+
+                                <div class="formStyle-item-divder">
+                                    <!-- <label for="" class="button-wrapper">
+                                    <input type="submit" class="customBtn colourDarkBlue" value="确定"></label>
+                                -->
+                                <input type="submit" class="customBtn colourDarkBlue" value="确定">
+                                <input type="button" class="customBtn colourLightGray" value="取消"></div>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- main-content-end -->
+
+                <div class="footer">
+                    <div class="footerL floatL">技术支持：湖北博盛数字教育服务有限公司</div>
+                    <div class="footerR floatR">服务邮箱：services@dodoedu.com 客服热线：400-8866-561 鄂ICP备13014028号-1</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <script src="script/jquery-1.6.min.js"></script>
+    <script src="script/tab.js"></script>
+    <script src="script/tableOrder.js"></script>
+    <script src="script/dropdownlist.js"></script>
+    <script src="script/indexPage.js"></script>
+
+</body>
+</html>

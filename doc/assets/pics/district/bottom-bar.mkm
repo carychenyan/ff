@@ -1,0 +1,9 @@
+<MKM version="2.0" imageFileUrl="file:///E:/local_work/%e5%89%8d%e7%ab%af%e8%ae%be%e8%ae%a1%e6%a1%86%e6%9e%b6/docs/assets/pics/district/bottom-bar.png">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="20" x="597" y="169"/>
+    <LengthMark direction="3" color="16711680" length="8" x="483" y="202"/>
+    <LengthMark direction="12" color="16711680" length="960" x="59" y="266"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="60" y="155" textMaxWidth="289" offsetX="276" offsetY="23" text="该用法是社区所有页面的统一用法，其它使用模式，都应该归纳出该样子"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="856" y="178" textMaxWidth="155" offsetX="46" offsetY="37" text="鼠标经过和点击的效果，可根据页面配色，灵活调整。默认经过是变暗，加下划线"/>
+  </Marks>
+</MKM>

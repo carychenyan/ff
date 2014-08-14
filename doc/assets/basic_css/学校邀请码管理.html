@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学校管理后台-列表页</title>
+    <link href="style/xuexiao.css" rel="stylesheet" type="text/css" />
+    <link href="style/component.css" rel="stylesheet" type="text/css" />
+    <link href="style/layout.css" rel="stylesheet" type="text/css" />
+    <link href="style/skin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar width226 floatL">
+            <div class="schLogo">
+                <img src="images/school_logo.png" alt="" />
+            </div>
+            <ul class="tab4Menu manageList font14">
+                <li class="menuCell tabMenuCurrent">
+                    <a href="#" title="学校资料" target="_blank"> <i class="icon_schInfo marginL15"></i>
+                        学校资料
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="信息管理" target="_blank"> <i class="icon_infoManageGray marginL15"></i>
+                        信息管理
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="班级教师管理" target="_blank">
+                        <i class="icon_teacherManageGray marginL15"></i>
+                        班级教师管理
+                    </a>
+                </li>
+                <li class="menuCell">
+                    <a href="#" title="互动管理" target="_blank">
+                        <i class="icon_interactManageGray marginL15"></i>
+                        互动管理
+                    </a>
+                </li>
+                <li class="menuCell tabMenuHover">
+                    <a href="#" title="应用调查" target="_blank">
+                        <i class="icon_plusGray floatR" title="展开"></i>
+                        <i class="icon_appSurveyGray marginL15"></i>
+                        应用调查
+                    </a>
+                    <ul class="secondaryMenu font12">
+                        <li class="menuCell tabMenuCurrent">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                学生活跃度统计
+                            </a>
+                        </li>
+                        <li class="menuCell tabMenuHover">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menuCell tabSecondaryMenuCurrent">
+                    <a href="#" title="数据统计" target="_blank">
+                        <i class="icon_minusGray floatR" title="收起"></i>
+                        <i class="icon_dataStatisticsGray marginL15"></i>
+                        数据统计
+                    </a>
+                    <ul class="secondaryMenu font12">
+                        <li class="menuCell tabMenuCurrent">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                学生活跃度统计
+                            </a>
+                        </li>
+                        <li class="menuCell tabMenuHover">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                        <li class="menuCell">
+                            <a href="#" title="数据统计" target="_blank" class="grayA">
+                                <span class="itemSymbol">■</span>
+                                教学情况
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main floatR" style="width:100%">
+            <div class="mainLeft">
+                <div class="manageFunc font14">
+                    <a href="/School_Home/index/school/121502" title="退出帐号" class="exitA floatR">
+                        <i class="icon_exit"></i>
+                        退出帐号
+                    </a>
+                    <ul class="mainNav floatL">
+                        <li class="">
+                            <a href="/School_Home/index/school/121502" target="_blank">湖北省-武汉市-东湖开发区-长江数字学校</a>
+                        </li>
+                    </ul>
+                    <div class="manageFuncDropdown floatR">
+                        <div class="customDropdownWrap customDropdownStyle2">
+                            <span class="dropdown_currentValue">
+                                <span class="dropdownTxt">
+                                    <img src="http://dev-images.dodoedu.com/image/20131384930806-15810-5211-7628-64.jpg" width="18" class="marginR5">wuya001</span>
+                                <i class="icon_downArrStyle2"></i>
+                            </span>
+                            <div class="dropdownItem width150">
+                                <ul class="dropdownItemUl">
+                                    <li class="dropdownCell">
+                                        <a href="/School_Home/index/school/121502" title="学校主页" target="_blank" class="displayBlock">学校主页</a>
+                                    </li>
+                                    <li class="dropdownCell">
+                                        <a href="http://dev.dodoedu.com" title="多多社区" target="_blank" class="displayBlock">多多社区</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    =
+                    <div class="clear"></div>
+                </div>
+                <div class="page-info">
+                    <div class="pageHeader">
+                        <h2>栏目管理</h2>
+
+                        <span class="funIntro">栏目功能描述</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="formWrap">
+                        <form method="post" action="editPost" id="Module_form" name="Module_form" class="formStyle">
+                            <fieldset>
+                                <legend></legend>
+
+                                <div class="formStyle-item customTipsWrap tipsFinish">
+                                    <label for="" class="formStyle-label">
+                                        <span class="formStyle-required"></span>
+                                        学校缴请码
+                                    </label>
+                                    SW5YEL
+                                    <span class="formStyle-other">
+                                        <i class="icon_finish floatL"></i>
+                                    </span>
+                                    <p class="formStyle-explain"></p>
+                                </div>
+
+                                <div class="formStyle-item" style="margin-bottom:60px">
+                                    <a href="/School_Admin_Invitation/reset/school/121502?code=SW5YEL&amp;status=1" class="customBtn colourOrange1">重置邀请码</a>
+
+                                    <a href="/School_Admin_Invitation/disabled/school/121502?code=SW5YEL&amp;status=0" class="customBtn colourLightGray">禁用邀请码</a>
+                                </div>
+
+                                <div class=" customTipsWrap tipsWarning " style="margin-bottom:10px">
+                                    <i class="icon_warningSmall floatL"></i>
+                                    <div class="floatL width298">
+                                        <pre>邀请码使用说明：
+1. 学校邀请码是用来加入学校的一种验证码
+2. 状态为禁用时，邀请码无效
+3. 邀请码重置后原来的邀请码无效。
+</pre>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <table class="tableSet">
+                                    <thead>
+                                        <tr>
+                                            <th>加入时间</th>
+                                            <th>类型</th>
+                                            <th>用户名</th>
+
+                                            <th>邀请码</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tableSet-split">
+                                            <td></td>
+                                            <td>学校邀请码</td>
+                                            <td>张三</td>
+                                            <td>wew</td>
+
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4">共：1条数据</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footerL floatL">技术支持：湖北博盛数字教育服务有限公司</div>
+                    <div class="footerR floatR">服务邮箱：services@dodoedu.com 客服热线：400-8866-561 鄂ICP备13014028号-1</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+<!--         <div style="position: absolute; visibility: visible; left: 450px; top: 180px;" class="funInfoWarp">
+            <div class="funInfoCont">
+                选择此选项可在 Google Analytics（分析）中启用受众特征报告。除了这一步操作之后，您还需要
+                <a href="https://support.google.com/analytics/answer/2444872">对跟踪代码稍做修改</a>
+                。如果您在使用再营销列表，说明您可能已经执行过这项修改。
+            </div>
+        </div> -->
+    </div>
+    <script src="script/jquery-1.6.min.js"></script>
+    <script src="script/tab.js"></script>
+    <script src="script/tableOrder.js"></script>
+    <script src="script/dropdownlist.js"></script>
+    <script src="script/indexPage.js"></script>
+
+</body>
+</html>
