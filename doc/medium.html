@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<title>媒体对象</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/css/docs.css" rel="stylesheet">
+	<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	<style type="text/css">
+h1, h2, h3, .masthead p, .subhead p, .marketing h2, .lead
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+  font-weight: normal;
+}
+#scrollUp1 {
+  bottom: 20px;
+  right: 20px;
+  height: 38px;  /* Height of image */
+  width: 38px; /* Width of image */
+  background: url("assets/img/top.png") no-repeat;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<!-- Navbar
+    ================================================== -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="./index.html">DodoEDU</a>
+				<div class="nav-collapse collapse navbar-inverse-collapse">
+				<ul class="nav">
+					<li><a href="./index.html">首页</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">视觉规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="shape.html">图标库/设计规范</a></li>
+						<li><a href="logo.html">LOGO规范/文档</a></li>
+						<li><a href="color.html">色彩规范/文档</a></li>
+						<li><a href="banner.html">Bannerd设计规范</a></li>
+					</ul>
+					</li>
+					<li><a href="text.html">文案</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">前端规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="css_guideline.html">W3C/CSS规范</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web控件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="layout.html">网页排版</a></li>
+						<li><a href="district.html">顶部/底部区域</a></li>
+						<li><a href="base-css.html">基础css样式、表单</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web组件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="components_first.html">第一部分</a></li>
+						<li><a href="components_second.html">第二部分</a></li>
+						<li><a href="components_third.html">第三部分</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">JS功能<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="jsModul.html">JS自定义功能</a></li>
+						<li><a href="jsDev.html">JS第三方插件</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">其它<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="mobile.html">移动浏览器</a></li>
+						<li><a href="workflow.html">前端流程</a></li>
+					</ul>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Subhead
+================================================== -->
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1>媒体对象</h1>
+			<p class="lead">
+				网页富媒体元素、控件的设置和风格的统一。主要包含：flash播放器，页面播放器
+				<a href="">GUI.psd下载</a>
+				|
+				<a href="">下载</a>
+			</p>
+		</div>
+	</header>
+	<div class="container">
+		<!-- Docs nav
+    ================================================== -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li>
+						<a href="#player"> <i class="icon-chevron-right"></i>
+							flash适配播放器
+						</a>
+					</li>
+					<li>
+						<a href="#MP3">
+							<i class="icon-chevron-right"></i>
+							mp3音频播放
+						</a>
+					</li>
+					<li>
+						<a href="#upload">
+							<i class="icon-chevron-right"></i>
+							上传
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="span9">
+				<section id="player">
+					<div class="page-header">
+						<h1>flash适配播放器</h1>
+					</div>
+					<h2>交互描述</h2>
+					<p>
+						flash播放器要考虑的交互：
+						<br> <strong>流畅:</strong>
+						加载较快，用户等待的缓冲时间较短（去除其他因素）。视频播发，不迟钝，不占有过多的cpu,不易引起浏览器崩溃
+						<br> <strong>体积小:</strong>
+						插件文件体积小，页面加载快，尽量减少无关内容的
+						<br>
+						<strong>好用:</strong>
+						具体参考详细的插件
+					</p>
+					<h2>设计描述</h2>
+					<p>
+						图标统一，整体，协调；标准皮肤，与页面风格搭配。以供设计师是参考、学习，自定义
+						<br>
+						标准的水印；为配合广告投入而进行的用户体验方面的统一调整和规范.
+						<p class="thumbnail1">
+							<img src="assets/pics/water_making1.png"/>
+						</p>
+					</p>
+					<h2>使用方法</h2>
+					<p>
+						<strong>具体请参考:</strong>
+						JS功能>
+						<a href="jsDev.html#flashplayer">第三方插件</a>
+					</p>
+				</section>
+				<section id="MP3">
+					<div class="page-header">
+						<h1>音频播放器</h1>
+					</div>
+					<h2>交互描述</h2>
+					<p>提供音乐的播放</p>
+					<h2>设计描述</h2>
+					<p>
+						图标统一，整体，协调；
+						<br>
+						标准皮肤，与页面风格搭配。
+						<br>以供设计师是参考、学习，自定义</p>
+					<h2>使用方法</h2>
+					<p>
+						<strong>具体请参考:</strong>
+						JS功能>
+						<a href="jsDev.html#flashplayer">第三方插件</a>
+					</p>
+					<h2>其它</h2>
+					<p>存储标准，压缩比例和标准</p>
+				</section>
+				<section id="upload">
+					<div class="page-header">
+						<h1>上传</h1>
+					</div>
+					<h2>交互描述</h2>
+					<p>
+						上传是一个复杂的过程，需要考虑较多环节。主要包含一下过程：1.文件选取（是、否、取消） 2.后台上传（进度）3.结束（成功，失败，是否继续上传）
+					</p>
+					<img src="assets/pics/uploader1.png" alt="" class="thumbnail" style=""/>
+					<img src="assets/pics/uploader2.png" alt="" class="thumbnail" style=""/>
+					<h2>使用方法</h2>
+					<p>
+						<strong>具体请参考:</strong>
+						JS功能>
+						<a href="jsDev.html#uploadFile">文件上传</a>
+					</p>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>
+			版本 0.5（2013-10）
+			<a href="change_log.html">版本日志</a>
+			|
+			<a href="#">BUG反馈</a>
+			（指向BUG平台）
+				|
+			<a href="#">使用建议</a>
+			（指向BUG平台）
+		</p>
+	</div>
+	<!-- Le javascript
+    ================================================== -->
+	<!-- 侧边栏置顶悬浮的js -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap-dropdown.js"></script>
+	<script src="assets/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/js/application.js"></script>
+	<script src="assets/js/bootstrap-affix.js"></script>
+</body>
+</html>

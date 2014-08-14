@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>排版规律-栅格化</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/shCoreDefault.css" rel="stylesheet">
+    <link href="assets/css/component.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <style type="text/css">
+h1, h2, h3,h4,h5,h6, .masthead p, .subhead p, .marketing h2, .lead
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+  font-weight: normal;
+}
+#scrollUp1 {
+  bottom: 20px;
+  right: 20px;
+  height: 38px;  /* Height of image */
+  width: 38px; /* Width of image */
+  background: url("assets/img/top.png") no-repeat;
+}
+</style>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"></head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="./index.html">DodoEDU</a>
+                <div class="nav-collapse collapse navbar-inverse-collapse">
+                <ul class="nav">
+                    <li><a href="./index.html">首页</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">视觉规范 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="shape.html">图标库/设计规范</a></li>
+                        <li><a href="logo.html">LOGO规范/文档</a></li>
+                        <li><a href="color.html">色彩规范/文档</a></li>
+                        <li><a href="banner.html">Bannerd设计规范</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="text.html">文案</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">前端规范 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="css_guideline.html">W3C/CSS规范</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web控件<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="layout.html">网页排版</a></li>
+                        <li><a href="district.html">顶部/底部区域</a></li>
+                        <li><a href="base-css.html">基础css样式、表单</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web组件<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="components_first.html">第一部分</a></li>
+                        <li><a href="components_second.html">第二部分</a></li>
+                        <li><a href="components_third.html">第三部分</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">JS功能<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="jsModul.html">JS自定义功能</a></li>
+                        <li><a href="jsDev.html">JS第三方插件</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">其它<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mobile.html">移动浏览器</a></li>
+                        <li><a href="workflow.html">前端流程</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subhead
+================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1>排版规律-栅格系统</h1>
+            <p class="lead">
+                理性布局，栅格系统在多多社区上的应用。
+            </p>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Docs nav
+    ================================================== -->
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav affix-top">
+                    <li>
+                        <a href="#layout"> <i class="icon-chevron-right"></i>
+                            多多布局
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#rule">
+                            <i class="icon-chevron-right"></i>
+                            规律
+                        </a>
+                    </li>
+<!--                     <li>
+                        <a href="#ways">
+                            <i class="icon-chevron-right"></i>
+                            几种布局方式(流式，浮动，固定)
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="#about">
+                            <i class="icon-chevron-right"></i>
+                            关于栅格系统
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="span9">
+                <section id="rule">
+                    <div class="page-header">
+                        <h2>网页布局应用</h2>
+                        <p>
+                            定义：以规则的网格阵列来指导和规范网页中的版面布局以及信息分布。
+                            <br>
+                            网页栅格系统是从平面栅格系统中发展而来。对于网页设计来说，栅格系统的使用，不仅可以让网页的信息呈现更加美观易读，更具可用性。
+                            <br>对于前端开发来说，网页将更加的灵活与规范。</p>
+                        <h2>计算公式</h2>
+                        <p>
+                            在网页设计中，我们把宽度为“W”的页面分割成n个网格单元“a”，每个单元与单元之间的间隙设为“i”,此时我们把“a+i”定义“A”。他们之间的关系如下：
+W =（a×n）+（n-1）i
+由于a+i=A，
+可得： <strong>(A×n) – i = W</strong>
+                        </p>
+                        <p>
+                            <img src="assets/pics/layout3.jpg" alt="" class="thumbnail" />
+                        </p>
+                    </div>
+                </section>
+                    <section id="layout">
+                    <h2>由公式分析多多社区布局结构值如下：</h2>
+                    <p> <strong>(40*25)-10=990</strong>
+                        【A=40，n=25，i=10】
+                        <p>
+                            <p>详细：</p>
+                            <table width="100%" border="1" cellspacing="1" cellpadding="4" style="border-color:#ddd;">
+                                <tr>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>n=</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>1</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>2</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>3</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>4</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>5</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>6</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>7</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>8</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>9</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>10</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>11</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>12</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>13</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#E2F5E2">
+                                        <strong>W=</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#E2F5E2">30</td>
+                                    <td align="center" bgcolor="#E2F5E2">70</td>
+                                    <td align="center" bgcolor="#E2F5E2">110</td>
+                                    <td align="center" bgcolor="#E2F5E2">150</td>
+                                    <td align="center" bgcolor="#E2F5E2">190</td>
+                                    <td align="center" bgcolor="#E2F5E2">230</td>
+                                    <td align="center" bgcolor="#E2F5E2">270</td>
+                                    <td align="center" bgcolor="#E2F5E2">310</td>
+                                    <td align="center" bgcolor="#E2F5E2">350</td>
+                                    <td align="center" bgcolor="#E2F5E2">390</td>
+                                    <td align="center" bgcolor="#E2F5E2">430</td>
+                                    <td align="center" bgcolor="#E2F5E2">470</td>
+                                    <td align="center" bgcolor="#E2F5E2">510</td>
+                                </tr>
+                                <tr align="center">
+                                    <td colspan="14" bgcolor="#FFFFFF">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>n=</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>14</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>15</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>16</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>17</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>18</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>19</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>20</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>21</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>22</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>23</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>24</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">
+                                        <strong>25</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#FFFFDF">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#E2F5E2">
+                                        <strong>W=</strong>
+                                    </td>
+                                    <td align="center" bgcolor="#E2F5E2">550</td>
+                                    <td align="center" bgcolor="#E2F5E2">590</td>
+                                    <td align="center" bgcolor="#E2F5E2">630</td>
+                                    <td align="center" bgcolor="#E2F5E2">670</td>
+                                    <td align="center" bgcolor="#E2F5E2">710</td>
+                                    <td align="center" bgcolor="#E2F5E2">750</td>
+                                    <td align="center" bgcolor="#E2F5E2">790</td>
+                                    <td align="center" bgcolor="#E2F5E2">830</td>
+                                    <td align="center" bgcolor="#E2F5E2">870</td>
+                                    <td align="center" bgcolor="#E2F5E2">910</td>
+                                    <td align="center" bgcolor="#E2F5E2">950</td>
+                                    <td align="center" bgcolor="#E2F5E2">990</td>
+                                    <td align="center" bgcolor="#E2F5E2">&nbsp;</td>
+                                </tr>
+                            </table>
+                            <p></p>
+                            <p>样式：</p>
+                            <p>
+                                n=1-25;样式名：
+                                <code>.grid_col*</code>
+                                其中 * 对应相应的n数值;
+                            </p>
+                            <p>
+                                用法：给块级标签加上样 式
+                                <code>.grid_col*</code>
+                                <code>.marginR10</code>
+                                ，另需根据实际情况，加上浮动或其他样式。注：浮动至最右靠外框的不要加
+                                <code>.marginR10</code>
+                            </p>
+                            <p>
+                                DEMO：
+                                <a href="downLoad/component.rar" title="">
+                                    <img src="assets/img/rarIcon.png" alt="">component</a>
+                                中gridSystem.html
+                            </p>
+                            <p></p>
+                            <div class="bs-docs-example font12">
+                                <p>组成总宽为830px，布局为1：2：1</p>
+                                <div class="grid_col5 marginR10 floatL height24 greenBgColor textAlignC">5</div>
+                                <div class="grid_col11 marginR10 floatL height24 greenBgColor textAlignC">11</div>
+                                <div class="grid_col5 floatL height24 greenBgColor textAlignC">5</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="prettyprint linenums">
+                                <table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html">
+                                    <tbody>
+                                        <tr>
+                                            <td class="gutter">
+                                                <div class="line number1 index0 alt2">1</div>
+                                                <div class="line number2 index1 alt1">2</div>
+                                                <div class="line number3 index2 alt2">3</div>
+                                                <div class="line number4 index3 alt1">4</div>
+                                            </td>
+                                            <td class="code">
+                                                <div class="container">
+                                                    <div class="line number1 index0 alt2">
+                                                        <code class="html plain">&lt;</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html color1">class</code>
+                                                        <code class="html plain">=</code>
+                                                        <code class="html string">"grid_col5 marginR10 floatL height24 greenBgColor textAlignC"</code>
+                                                        <code class="html plain">&gt;5&lt;/</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html plain">&gt;</code>
+                                                    </div>
+                                                    <div class="line number2 index1 alt1">
+                                                        <code class="html plain">&lt;</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html color1">class</code>
+                                                        <code class="html plain">=</code>
+                                                        <code class="html string">"grid_col11 marginR10 floatL height24 greenBgColor textAlignC"</code>
+                                                        <code class="html plain">&gt;11&lt;/</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html plain">&gt;</code>
+                                                    </div>
+                                                    <div class="line number3 index2 alt2">
+                                                        <code class="html plain">&lt;</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html color1">class</code>
+                                                        <code class="html plain">=</code>
+                                                        <code class="html string">"grid_col5 floatL height24 greenBgColor textAlignC"</code>
+                                                        <code class="html plain">&gt;5&lt;/</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html plain">&gt;</code>
+                                                    </div>
+                                                    <div class="line number4 index3 alt1">
+                                                        <code class="html plain">&lt;</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html color1">class</code>
+                                                        <code class="html plain">=</code>
+                                                        <code class="html string">"clear"</code>
+                                                        <code class="html plain">&gt;&lt;/</code>
+                                                        <code class="html keyword">div</code>
+                                                        <code class="html plain">&gt;</code>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                       
+
+                            <h2>根据目前社区布局，分为两种。</h2>
+                            <h3>第一种是以社区主站为例，定义宽度为990PX；</h3>
+                            <p>方法：n相加=25，即可成为990PX的布局</p>
+                            <p>例如：要设置1：3：1的布局。</p>
+                            <p>
+                                如首确定
+                                <strong>1</strong>
+                                用n=6,即宽为230px;
+                            </p>
+                            <p>
+                                那么可以得出
+                                <strong>3</strong>
+                                用n=25-(2*6)=13，即宽为510px;
+                            </p>
+                            <p>证：(230+i)+(510+i)+230=990</p>
+                            <h3>第二种是以各个站内容区为例，定义宽度为950PX；</h3>
+                            <p>方法同上，n数值从24开始算</p>
+                            <p></p>
+ </section>
+                        <section id="about">
+                            <h2>关于栅格系统</h2>
+                            <p class="thumbnail1" >
+                                <img src="assets/pics/layout4.jpg"/>
+                            </p>
+                            <p>
+                                1692年，新登基的法国国王路易十四感到法国的印刷水平差强人意，因此命令成立一个管理印刷的皇家特别委员会。他们的首要任务是设计出科学的、合理的， 重视功能性的新字体。委员会由数学家尼古拉斯加宗（Nicolas Jaugeon）担任领导，他们以罗马体为基础，采用方格为设计依据，每个字体方格分为64个基本方格单位，每个方格单位再分成36个小格，这样，一个印刷版面就有2304个小格组成，在这个严谨的几何网格网络中设计字体的形状，版面的编排，试验传达功能的效能，这是世界上最早对字体和版面进行科学实验的活动，也是栅格系统最早的雏形。
+栅格系统英文为“grid systems”，也有人翻译为“网格系统”，其实是一回事。不过从定义上说，栅格更为准确些，从维基百科查到栅格的定义为：栅格设计系统（又称网格设计系统、标准尺寸系统、程序版面设计、瑞士平面设计风格、国际主义平面设计风格），是一种平面设计的方法与风格。运用固定的格子设计版面布局，其风格工整简洁，在二战后大受欢迎，已成为今日出版物设计的主流风格之一。
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    版本 0.5（2013-10）
+                    <a href="change_log.html">版本日志</a>
+                    |
+                    <a href="#">BUG反馈</a>
+                    （指向BUG平台）
+                |
+                    <a href="#">使用建议</a>
+                    （指向BUG平台）
+                </p>
+            </div>
+            <!-- Le javascript
+    ================================================== -->
+            <!-- 侧边栏置顶悬浮的js -->
+            <script src="assets/js/jquery.js"></script>
+            <script src="assets/js/bootstrap-dropdown.js"></script>
+            <script src="assets/js/bootstrap-scrollspy.js"></script>
+            <script src="assets/js/application.js"></script>
+            <script src="assets/js/bootstrap-affix.js"></script>
+</body>
+        </html>

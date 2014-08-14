@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<title>WEB组件(一)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Le styles -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/css/docs.css" rel="stylesheet">
+	<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<![endif]-->
+	<!-- Le fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+	<style type="text/css">
+h1, h2, h3,h4,h5,h6, .masthead p, .subhead p, .marketing h2, .lead
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+  font-weight: normal;
+}
+#scrollUp1 {
+  bottom: 20px;
+  right: 20px;
+  height: 38px;  /* Height of image */
+  width: 38px; /* Width of image */
+  background: url("assets/img/top.png") no-repeat;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<!-- Navbar
+    ================================================== -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="./index.html">DodoEDU</a>
+				<div class="nav-collapse collapse navbar-inverse-collapse">
+				<ul class="nav">
+					<li><a href="./index.html">首页</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">视觉规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="shape.html">图标库/设计规范</a></li>
+						<li><a href="logo.html">LOGO规范/文档</a></li>
+						<li><a href="color.html">色彩规范/文档</a></li>
+						<li><a href="banner.html">Bannerd设计规范</a></li>
+					</ul>
+					</li>
+					<li><a href="text.html">文案</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">前端规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="css_guideline.html">W3C/CSS规范</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web控件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="layout.html">网页排版</a></li>
+						<li><a href="district.html">顶部/底部区域</a></li>
+						<li><a href="base-css.html">基础css样式、表单</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web组件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li  class="active"><a href="components_first.html">第一部分</a></li>
+						<li><a href="components_second.html">第二部分</a></li>
+						<li><a href="components_third.html">第三部分</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">JS功能<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="jsModul.html">JS自定义功能</a></li>
+						<li><a href="jsDev.html">JS第三方插件</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">其它<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="mobile.html">移动浏览器</a></li>
+						<li><a href="workflow.html">前端流程</a></li>
+					</ul>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Subhead
+================================================== -->
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1>WEB组件(一)</h1>
+			<p class="lead">（一）页面指示器、加载动画（二）提示、下拉菜单、按钮 （三）Tab选项卡</p>
+			<!-- 	
+	第二版：（一）（翻页、分页、导航）、（二）（信息提示、分组列表、下拉菜单、按钮组）、（三）（导航、进度、信息流、页面指示器、浮层反馈、加载动画、）
+	-->
+			<!-- 第一版：（一）（翻页、加载动画、页面指示器、浮层反馈）、（二）（信息提示、分组列表、下拉菜单、按钮组）、（三）（导航、分页、标签组、转换图、进度、日历、信息流） -->
+		</div>
+	</header>
+	<div class="container">
+		<!-- Docs nav
+    ================================================== -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav">
+					<li>
+						<a href="#form_control"> <i class="icon-chevron-right"></i>
+							页面指示器
+						</a>
+					</li>
+					<li>
+						<a href="#loading">
+							<i class="icon-chevron-right"></i>
+							加载动画
+						</a>
+					</li>
+					<!--<li>
+					<a href="#page_turning">
+						<i class="icon-chevron-right"></i>
+						翻页
+					</a>
+				</li>
+				<li>
+					<a href="#page_counting">
+						<i class="icon-chevron-right"></i>
+						页面指示器
+					</a>
+				</li>
+				<li class="dropdown-submenu">
+					<a tabindex="-1" href="#float_layer">浮层反馈</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a tabindex="-1" href="#">对话弹窗</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="#">新手引导</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="#">状态提示</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="#">警告框</a>
+						</li>
+					</ul>
+				</li>
+				-->
+			</ul>
+		</div>
+		<div class="span9">
+			<!-- form_control
+        ================================================== -->
+			<section id="form_control">
+				<div class="page-header">
+					<h1>页面指示器</h1>
+					<p>
+						对于复杂的需要切换的内容，标识/说明当前的位置
+						<a href="assets/docs/web_controls/pager.docx"></a>
+						<img src="assets/img/docIcon.png" alt=""/>
+					</a>
+					psd文件
+				</p>
+			</div>
+			<h3>交互描述</h3>
+			<p>
+				放置于多个视图合集的下方。一般不超过5个。
+				<br>不适用于单个视图的存在；过多的视图合集，一般多于5个。</p>
+			<h3>设计描述</h3>
+			<p>
+				<img src="assets/pics/pager1.png" alt="" class="thumbnail"/>
+			</p>
+		</section>
+		<!-- page_turning
+        ================================================== 
+			<section id="page_turning">
+		<div class="page-header">
+			<h1>翻页</h1>
+			<p>暂时无</p>
+		</div>
+	</section>
+	<!-- loading
+        ================================================== -->
+	<section id="loading">
+		<div class="page-header">
+			<h1>加载动画</h1>
+			<p>告知用户正在加载、加载进度等信息；或点击后加载</p>
+			<p>
+				<a href="assets/psd/district.psd">
+					<img src="assets/img/psdIcon.png" alt=""/>
+					psd文件
+				</a>
+				<a href="assets/docs/web_controls/district.docx">
+					<img src="assets/img/docIcon.png" alt=""/>
+					Word文件
+				</a>
+			</p>
+		</div>
+		<h2>交互描述</h2>
+		<p>
+			用于查看长时间后台操作的进度，一般用于界面转场和页面加载时
+			<br>
+			1.在执行耗时操作时提供等待反馈。
+			<br>2.即时反馈无需加载动画。</p>
+		<h2>设计描述</h2>
+		<p>
+			当loading加载时间需要3秒以上比较长的时间，建议loading后面可以加一些有爱的文案减轻用户的焦虑，如“正在努力加载”等
+		</p>
+		<h2>多多社区案例归纳</h2>
+		<p>
+			<img src="assets/pics/loading/loading.png" alt="loading1" class="thumbnail"/>
+		</p>
+		<h3>
+			1.	旋转式
+		</h3>
+		<p>
+			<img src="assets/pics/loading/loading3.png" alt="loading1" class="thumbnail"/>
+			<span class="">
+				<img src="assets/pics/loading/loading_1.gif" alt="loading1" class="thumbnail"/>
+			</span>
+		</p>
+		适用于较大面积，且方正的区域
+		<h3>
+			2.	点动式
+		</h3>
+		<p>
+			<img src="assets/pics/loading/loading4.png" alt="loading1" class="thumbnail1"/>
+		</p>
+		<p>
+			<img src="assets/pics/loading/loading5.png" alt="loading1" class="thumbnail"/>
+		</p>
+		适用于较大面积，但长方形的区域
+		<h3>
+			3.	进度条式
+		</h3>
+		适用于大规模加载，目前尚未使用到的
+		<h2>使用方法</h2>
+	</section>
+	<!-- page_counting
+        ================================================== 
+			<section id="page_counting">
+	<div class="page-header">
+		<h1>页面指示器</h1>
+		<h2>交互描述</h2>
+		<p>告知用户切换图的位置。鼠标经过图片的时候，应有暂停的交互；图片初始化的时候，可有相应的加载提示</p>
+		<h2>常见形式</h2>
+		<p>
+			<img src="assets/pics/loading2.png" alt="loading1" class="thumbnail"/>
+		</p>
+		<h2>轮转图</h2>
+		<p>
+			<img src="assets/pics/page_counting1.png" alt="loading1" class="thumbnail"/>
+		</p>
+		<h2>使用方法</h2>
+		<h3>调用方法</h3>
+		<h3>扩展方法</h3>
+	</div>
+</section>
+<!-- float_layer
+        ================================================== 
+			<section id="float_layer">
+<div class="page-header">
+	<h1>浮层反馈</h1>
+	<p>悬浮在页面上方，给用户引导或帮助的页面或控件</p>
+	<h2>交互描述</h2>
+	<p>与用户进行沟通，询问；引导和确定用户采纳的行为。该操作具有一定的强制性和干扰性，在流畅的操作刘中，会打断用户的操作</p>
+	<p>
+		<img src="assets/pics/float_layer5.png" alt="loading1" class="thumbnail"/>
+	</p>
+	<h2>设计描述</h2>
+	<h3>半透明的图像</h3>
+	<p>需要半透明遮罩的，边框不规则的图片，可用PNG8保存，描边选择黑色边距填充，即可保证效果，也可以减少文件体积。</p>
+	<p>上传</p>
+	<h3>基本形式和布局</h3>
+	<h4>对齐方式</h4>
+	<p>
+		根据格式塔心理，垂直的对其的内容给用户的视觉和操作是最舒服的。在实际的设计中，也劲量能够一边对齐，提高效率；需要用户和停留的内容，一般可打断下用户的规律。
+		<br>常见的对齐方式为左对齐，居中对齐，右对齐，维护页面的平衡感</p>
+	<h4>页面比例</h4>
+	<p>元素上下间距：10px 20px.给用户的视觉感受：饱满，舒服，不紧张</p>
+	<h4>四周间距</h4>
+	<p>建议内间距：5px 10px 20px 30px;</p>
+	<h4>最小尺寸</h4>
+	<p>控件应该保存最小的长宽，不因内容少而无限制的缩小控件的长宽。建议最小的长宽：460px 180px</p>
+	<h4>软提示</h4>
+	<p>网页中出现的需要告知用户结果，而不需要用户产生操作的提示，可以劲量使用软提示。</p>
+	<p>
+		<img src="assets/pics/float_layer9.png" alt="loading1" class="thumbnail"/>
+	</p>
+	<h3>使用方法</h3>
+	<h4>颜色拓展</h4>
+	<h3>插件拓展</h3>
+	<h4>选择操作（流程引导）</h4>
+	<p>
+		<img src="assets/pics/float_layer7.png" alt="loading1" class="thumbnail"/>
+	</p>
+	<p>选择分类</p>
+	<h4>确认操作（流程引导）</h4>
+	<p>
+		<img src="assets/pics/float_layer4.png" alt="loading1" class="thumbnail"/>
+	</p>
+	<p>操作咨询</p>
+	<h4>新手引导</h4>
+	<p>告知用户新版本，新开发的功能；告知用户如何使用复杂的产品；引导用户快速找到常用的功能（大改版）</p>
+	<p>补充浏览器兼容；图片压缩和处理；设计优化；图片保存格式</p>
+	<p>
+		<img src="assets/pics/page_counting1.png" alt="loading1" class="thumbnail"/>
+	</p>
+	<h4>状态提示</h4>
+	<p>告知操作的结果；告知新消息，通知；告知活动，快速链接</p>
+	<p>
+		<img src="assets/pics/float_layer1.png" alt="loading1" class="thumbnail"/>
+	</p>
+	<p>
+		<img src="assets/pics/float_layer6.png" alt="loading1" class="thumbnail"/>
+	</p>
+	<p>成功；失败；警告；错误</p>
+	<h4>警告框</h4>
+	<p>
+		<img src="assets/pics/float_layer4.png" alt="loading1" class="thumbnail"/>
+	</p>
+</div>
+</section>
+-->
+</div>
+</div>
+</div>
+<div class="footer">
+<p>
+版本 0.5（2013-10）
+<a href="change_log.html">版本日志</a>
+|
+<a href="#">BUG反馈</a>
+（指向BUG平台）
+				|
+<a href="#">使用建议</a>
+（指向BUG平台）
+</p>
+</div>
+<!-- Le javascript
+    ================================================== -->
+<!-- 侧边栏置顶悬浮的js -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/js/application.js"></script>
+<script src="assets/js/bootstrap-affix.js"></script>
+<script src="assets/js/bootstrap-dropdown.js"></script>
+</body>
+</html>

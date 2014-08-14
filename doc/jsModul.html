@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>Javascript 功能模块</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/feature.css" rel="stylesheet" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<script src="assets/js/html5shiv.js"></script>
+<![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <style type="text/css">
+        h1, h2, h3, h4, h5, h6, .masthead p, .subhead p, .marketing h2, .lead {
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+            font-weight: normal;
+        }
+    </style>
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="./index.html">DodoEDU</a>
+                <div class="nav-collapse collapse navbar-inverse-collapse">
+                <ul class="nav">
+                    <li><a href="./index.html">首页</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">视觉规范 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="shape.html">图标库/设计规范</a></li>
+                        <li><a href="logo.html">LOGO规范/文档</a></li>
+                        <li><a href="color.html">色彩规范/文档</a></li>
+                        <li><a href="banner.html">Bannerd设计规范</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="text.html">文案</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">前端规范 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="css_guideline.html">W3C/CSS规范</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web控件<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="layout.html">网页排版</a></li>
+                        <li><a href="district.html">顶部/底部区域</a></li>
+                        <li><a href="base-css.html">基础css样式、表单</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web组件<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="components_first.html">第一部分</a></li>
+                        <li><a href="components_second.html">第二部分</a></li>
+                        <li><a href="components_third.html">第三部分</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">JS功能<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="jsModul.html">JS自定义功能</a></li>
+                        <li><a href="jsDev.html">JS第三方插件</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">其它<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mobile.html">移动浏览器</a></li>
+                        <li><a href="workflow.html">前端流程</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subhead
+================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="container">
+            <h1>JS 自定义功能</h1>
+            <p class="lead">JS 自定义功能演示，以及使用方法 </p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="span3 bs-docs-sidebar">
+                <ul class="nav nav-list bs-docs-sidenav affix-top">
+                    <li><a href="#carousel"><i class="icon-chevron-right"></i>图片滚动</a></li>
+                    <li><a href="#iconList"><i class="icon-chevron-right"></i>列表滚动</a></li>
+                    <li><a href="#scroll"><i class="icon-chevron-right"></i>滚动条</a></li>
+                    <li><a href="#loadmore"><i class="icon-chevron-right"></i>加载更多</a></li>
+                    <li><a href="#likeOrUnlike"><i class="icon-chevron-right"></i>喜欢/取消喜欢</a></li>
+                    <li><a href="#inputlist"><i class="icon-chevron-right"></i>输入框下拉列表</a></li>
+                    <li><a href="#dialogMod"><i class="icon-chevron-right"></i>弹出框</a></li>
+                    <li><a href="#pageMod"><i class="icon-chevron-right"></i>分页</a></li>
+                    <li><a href="#backTop"><i class="icon-chevron-right"></i>回到顶部</a></li>
+                </ul>
+            </div>
+            <div class="span9">
+                <section id="carousel">
+                    <div class="page-header">
+                        <h1>图片滚动
+                            <small><a target="_blank" href="downLoad/jsDownload/piclistPlay.js" >piclistPlay.js</a></small>
+                        </h1>
+                    </div>
+                    <h2>图片滚动案例</h2>
+                    <p>下面就是一个“图片滚动组件”的案例。</p>
+                    <div class="bs-docs-example">
+                        <div class="hd_img" style="overflow: hidden">
+                            <div id="LoginAlbumConDiv" style="position: relative; width: 3930px; height: 365px; left: 0px;">
+                                <img name="imgChange" src="assets/img/jsModule/school_1.jpg">
+                                <img name="imgChange" src="assets/img/jsModule/school_2.jpg">
+                                <img name="imgChange" src="assets/img/jsModule/school_3.jpg">
+                                <img name="imgChange" src="assets/img/jsModule/school_4.jpg">
+                                <img name="imgChange" src="assets/img/jsModule/school_5.jpg">
+                            </div>
+                            <div class="page1" name="imgIndex">
+                                <a href="#" class="current">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <!--<a href="#">6</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"myCarousel"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">&quot;hd_img&quot;</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="tag"> id</span><span class="pun">=</span><span class="atv">"LoginAlbumConDiv&quot;</span><span class="tag">&nbsp;<span class="pln"><span class="atn">style</span><span class="pun">=</span><span class="atv">&quot;position:relative;width: 3930px; height: 365px; left:0px;&quot;</span></span>&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">data-ta </span><span class="atn">name</span><span class="pun">=</span><span class="atv">&quot;imgChange&quot;</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://dev-images.dodoedu.com/shequPage/user/login/images/hd_img_1.jpg&quot;"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln"><span class="tag">&lt;img</span> <span class="atn">name</span><span class="pun">=</span> <span class="atv">&quot;imgChange&quot;</span> <span class="atn">src</span><span class="pun">=</span> <span class="atv">"http://dev-images.dodoedu.com/shequPage/user/login/images/hd_img_2.jpg&quot;</span><span class="tag">&gt;</span></li><li class="L5"><span class="tag">&lt;img</span> <span class="atn">name</span><span class="pun">=</span> <span class="atv">&quot;imgChange&quot;</span> <span class="atn">src</span><span class="pun">=</span> <span class="atv">"http://dev-images.dodoedu.com/shequPage/user/login/images/hd_img_3.jpg&quot;"</span><span class="tag">&gt;</span></span></li><li class="L6"><span class="tag">&lt;img<span class="pln"> </span><span class="atn">name</span><span class="pun">=</span> <span class="atv">&quot;imgChange&quot;</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"http://dev-images.dodoedu.com/shequPage/user/login/images/hd_img_4.jpg"</span>&gt;</li><li class="L7"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span> <span class="atv">&quot;imgChange&quot;</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span> <span class="atv">"http://dev-images.dodoedu.com/shequPage/user/login/images/hd_img_5.jpg&quot;</span>&gt;</li><li class="L8"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span> <span class="atv">&quot;imgChange&quot;</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span> <span class="atv">&quot;http://dev-images.dodoedu.com/shequPage/user/login/images/hd_img_6.jpg&quot;</span><span class="tag">&gt;</span></li><li class="L9"><span class="tag">&lt;/div&gt;</span></li><li class="L10"><span class="com">&lt;!-- Carousel items --&gt;n></LI><li class="L11"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"carousel-inner"</span><span class="atn">name</span><span class="pun">=</span><span class="atv">"page&quot;</span><span class="tag">&gt;</span></li><li class="L12"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="tag">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"></span><span class="tag">class</span><span class="pun">=</span><span class="atv">"current"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/a<span class="tag">&gt;</span><li class="L13"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="tag">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/a<span class="tag">&gt;</span></li><li class="L12"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="tag">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/a<span class="tag">&gt;</span></li><li class="L14"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="tag">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span>4<span class="tag">&lt;/a<span class="tag">&gt;</span></li><li class="L15"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="tag">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span>5<span class="tag">&lt;/a<span class="tag">&gt;</span></li><li class="L15"><span class="pln">  </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="tag">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span>6<span class="tag">&lt;/a<span class="tag">&gt;</span></li><li class="L19"><span class="pln">  </span><span class="tag">&lt;/div<span class="tag">&gt;</span></li><li class="L19"><span class="pln">  </span><span class="tag">&lt;/div<span class="tag">&gt;</span></li></ol></pre>
+                    <div class="alert alert-warning">
+                        <strong>注意！替换为你需要展示的图片。</strong>
+                    </div>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">playPic.initPicPlayer</span><span class="pun">(<span class="pln">$</span><span class="pun">(</span><span class="str">'div[name="imgIndex"] a'</span><span class="pun">)</span>,<span class="str">'LoginAlbumConDiv'</span><span class="pun">,<span class="str">'655'</span><span class="pun">)</span></span></li></ol></pre>
+                    <h3>参数说明</h3>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td>参数1</td>
+                                <td>$('div[name="imgIndex"] a')</td>
+                                <td>鼠标点击的按钮对象数组集，可以实现图片切换。</td>
+                            </tr>
+                            <tr>
+                                <td>参数2</td>
+                                <td>LoginAlbumConDiv</td>
+                                <td>图片滚动的容器id</td>
+                            </tr>
+                             <tr>
+                                <td>参数3</td>
+                                <td>imgWidth</td>
+                                <td>每张图片的宽度</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="iconList">
+                    <div class="page-header">
+                        <h1>列表滚动
+                            <small><a target="_blank" href="downLoad/jsDownload/iconlistPlay.js">iconlistPlay.js</a></small>
+                        </h1>
+                    </div>
+                    <h2>列表滚动案例</h2>
+                    <p>下面就是一个“列表滚动组件”的案例。</p>
+                    <div class="bs-docs-example">
+                        <div class="Class_roll">
+                            <span class="pre cursor_hand" name="preAlbum"></span>
+                            <div id="albumShow" style="width: 620px; overflow: hidden; position: relative;">
+                                <div class="stuShow grayTxt1" id="albumConDiv" style="position: relative; width: 1242px; left: 0px;">
+                                    <div class="stuShowCell stuShowActive floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS5.jpg" width="40" height="40" alt=""></div>
+                                        <em>林亦飞</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS3.jpg" width="40" height="40" alt=""></div>
+                                        <em>张析</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS4.jpg" width="40" height="40" alt=""></div>
+                                        <em>王雨</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS1.jpg" width="40" height="40" alt=""></div>
+                                        <em>刘星晨</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS2.jpg" width="40" height="40" alt=""></div>
+                                        <em>张风</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS3.jpg" width="40" height="40" alt=""></div>
+                                        <em>梁欣玲</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS4.jpg" width="40" height="40" alt=""></div>
+                                        <em>翟颖</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS3.jpg" width="40" height="40" alt=""></div>
+                                        <em>张析</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS5.jpg" width="40" height="40" alt=""></div>
+                                        <em>林亦飞1</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS3.jpg" width="40" height="40" alt=""></div>
+                                        <em>张析1</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS4.jpg" width="40" height="40" alt=""></div>
+                                        <em>王雨2</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS1.jpg" width="40" height="40" alt=""></div>
+                                        <em>刘星晨2</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS2.jpg" width="40" height="40" alt=""></div>
+                                        <em>张风2</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS3.jpg" width="40" height="40" alt=""></div>
+                                        <em>梁欣玲2</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS4.jpg" width="40" height="40" alt=""></div>
+                                        <em>翟颖2</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS3.jpg" width="40" height="40" alt=""></div>
+                                        <em>张析2</em></div>
+                                    <div class="stuShowCell floatL cursor_hand">
+                                        <div>
+                                            <img src="assets/img/examples/userfaceS2.jpg" width="40" height="40" alt=""></div>
+                                        <em>张风2</em></div>
+                                </div>
+                            </div>
+                            <span class="next cursor_hand" name="nextAlbum"></span>
+                        </div>
+                        <div class="stuImpreessInfo grayTxt">
+                            <span class="floatR controlList"><em class="control_pre cursor_hand" title="已经是第一位同学了" name="preStudent"></em><em name="nextStudent" class="control_next cursor_hand" title="下一位同学：林雨淘"></em></span>
+                        </div>
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><img src="assets/img/jsDev/iconlist.jpg" /></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">initAlumList</span><span class="pun">();</span></li></ol></pre>
+                </section>
+                <section id="scroll">
+                    <div class="page-header">
+                        <h1>滚动条
+                            <small><a target="_blank" href="downLoad/jsDownload/scroll.js">scroll.js</a></small>
+                        </h1>
+                    </div>
+                    <h2>滚动条案例</h2>
+                    <p>下面就是一个“滚动条”的案例。</p>
+                    <div class="bs-docs-example">
+                        <div class="resultsBox grayTxt1" style="height: 100px; overflow: hidden; position: relative;">
+                            <div class="userCell" user_id="s35003327707009290047" user_name="吴小鹏">吴小鹏</div>
+                            <div class="userCell" user_id="s35788556905904650065" user_name="刘老师">
+                                刘老师
+                            </div>
+                            <div class="userCell" user_id="w35788631901803130084" user_name="吴亚">
+                                吴亚
+                            </div>
+                            <div class="userCell" user_id="j35788535105523670058" user_name="姜远康">
+                                姜远康
+                            </div>
+                            <div class="userCell" user_id="s35788528007328600004" user_name="何诚">
+                                何诚
+                            </div>
+                            <div class="userCell" user_id="l35788532804166270030" user_name="刘杰">
+                                刘杰
+                            </div>
+                            <div class="userCell" user_id="l35788523308852330071" user_name="李鸿">
+                                李鸿
+                            </div>
+                            <div class="userCell" user_id="s35003327707009290047" user_name="吴小鹏">
+                                吴小鹏
+                            </div>
+                            <div class="userCell" user_id="s35788556905904650065" user_name="刘老师">
+                                刘老师
+                            </div>
+                            <div class="userCell" user_id="w35788631901803130084" user_name="吴亚">
+                                吴亚
+                            </div>
+                            <div class="userCell" user_id="j35788535105523670058" user_name="姜远康">
+                                姜远康
+                            </div>
+                            <div class="userCell" user_id="s35788528007328600004" user_name="何诚">
+                                何诚
+                            </div>
+                            <div class="userCell" user_id="l35788532804166270030" user_name="刘杰">
+                                刘杰
+                            </div>
+                            <div class="userCell" user_id="l35788523308852330071" user_name="李鸿">
+                                李鸿
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"resultsBox grayTxt1"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"height: 100px; overflow: hidden; position: relative;"</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"userCell"</span><span class="pln"> </span><span class="tag">&gt;</span>李鸿<li><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li>...</li><li><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$("div.resultsBox").jscroll({ W: "8px" });</span></li></ol></pre>
+                </section>
+                <section id="loadmore">
+                    <div class="page-header">
+                        <h1>加载更多
+                            <small><a target="_blank" href="downLoad/jsDownload/loadMore.js">loadMore.js</a></small>
+                        </h1>
+                    </div>
+                    <h2>加载更多案例</h2>
+                    <p>下面就是一个“加载更多组件”的案例。</p>
+                    <div class="bs-docs-example">
+                        <div>
+                            <div id="showMoreDiv" class="SQblog_more" style="display: block; cursor: pointer">加载更多</div>
+                            <div id="pageLoadingDiv" class="SQblog_more" style="display: none;">加载中...</div>
+                        </div>
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li><span class="tag">&lt;div</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"showMoreDiv"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"SQblog_more"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"display: block; cursor: pointer"</span><span class="tag">&gt;</span>加载更多<span class="tag">&lt;/div<span class="tag">&gt;</span></li><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"pageLoadingDiv"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"SQblog_more"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"display: none"</span><span class="tag">&gt;</span>加载中<span class="tag">&lt;/div<span class="tag">&gt;</span></li><li><span class="tag">&lt;/div<span class="tag">&gt;</span></li></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">loadMore.init</span><span class="pun">(<span class="str">'http://dev.dodoedu.com/Home/allNews'</span>,<span class="str">'target=all&scope=all'</span>,initList<span class="pun">)</span></span></li></ol></pre>
+                    <h3>参数说明</h3>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td>参数1</td>
+                                <td>http://dev.dodoedu.com/Home/allNews</td>
+                                <td>需要向后台发送ajax的请求地址</td>
+                            </tr>
+                            <tr>
+                                <td>参数2</td>
+                                <td>target=all&scope=all</td>
+                                <td>需要向后台发送ajax的参数</td>
+                            </tr>
+                            <tr>
+                                <td>参数3</td>
+                                <td>initList</td>
+                                <td>ajax请求返回之后的回调方法</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="likeOrUnlike">
+                    <div class="page-header">
+                        <h1>喜欢
+                            <small><a target="_blank" href="downLoad/jsDownload/likeOrUnlike.js">likeOrUnlike.js</a></small>
+                        </h1>
+                    </div>
+                    <h2>喜欢案例</h2>
+                    <p>下面就是一个“喜欢/取消喜欢组件”的案例。</p>
+                    <div class="bs-docs-example">
+                        <div>
+                            <span style="cursor: pointer;" comment_type="fangle" content_id="1378188020" titlecon="喜欢" styletitle="styleTitle" class="noLikeIcon"></span>
+                            <span name="assessFont">喜欢</span>(<span style="cursor: pointer;" name="likeCount" type_name="fangle" type_id="1378188020">0</span>)
+                        </div>
+                        <div>
+                            <span style="cursor: pointer;" comment_type="fangle" content_id="1378188021" titlecon="喜欢" styletitle="styleTitle" class="likeIcon"></span>
+                            <span name="assessFont">取消喜欢</span>(<span style="cursor: pointer;" name="likeCount" type_name="fangle" type_id="1378188021">1</span>)
+                        </div>
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li><span class="tag">&lt;div</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"cursor: pointer;"</span><span class="pln"> </span><span class="atn">comment_type</span><span class="pun">=</span><span class="atv">"fangle"</span><span class="pln"> </span><span class="atn">content_id</span><span class="pun">=</span><span class="atv">"1378188020"</span><span class="pln"> </span><span class="atn">titlecon</span><span class="pun">=</span><span class="atv">"喜欢"</span><span class="pln"> </span><span class="atn">styletitle</span><span class="pun">=</span><span class="atv">"styleTitle"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"noLikeIcon"</span><span class="tag">&gt;</span><span class="tag">&lt;/span</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"assessFont"</span><span class="tag">&gt;</span>喜欢<span class="tag">&lt;/span<span class="tag">&gt;</span>(<span class="tag">&lt;span</span><span class="pln"> </span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"cursor: pointer;"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"likeCount"</span><span class="pln"> </span><span class="atn">type_name</span><span class="pun">=</span><span class="atv">"fangle"</span><span class="pln"> </span><span class="atn">type_id</span><span class="pun">=</span><span class="atv">"1378188020"</span><span class="tag">&gt;</span><span class="tag">&lt;/span</span><span class="tag">&gt;</span>)</li><li><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;div</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"cursor: pointer;"</span><span class="pln"> </span><span class="atn">comment_type</span><span class="pun">=</span><span class="atv">"fangle"</span><span class="pln"> </span><span class="atn">content_id</span><span class="pun">=</span><span class="atv">"1378188021"</span><span class="pln"> </span><span class="atn">titlecon</span><span class="pun">=</span><span class="atv">"取消喜欢"</span><span class="pln"> </span><span class="atn">styletitle</span><span class="pun">=</span><span class="atv">"styleTitle"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"LikeIcon"</span><span class="tag">&gt;</span><span class="tag">&lt;/span</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"assessFont"</span><span class="tag">&gt;</span>取消喜欢<span class="tag">&lt;/span<span class="tag">&gt;</span>(<span class="tag">&lt;span</span><span class="pln"> </span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"cursor: pointer;"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"likeCount"</span><span class="pln"> </span><span class="atn">type_name</span><span class="pun">=</span><span class="atv">"fangle"</span><span class="pln"> </span><span class="atn">type_id</span><span class="pun">=</span><span class="atv">"1378188021"</span><span class="tag">&gt;</span><span class="tag">&lt;/span</span><span class="tag">&gt;</span>)</li><li><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">likeOrNolike.init</span><span class="pun">()</span></li></ol></pre>
+                </section>
+                <section id="inputlist">
+                    <div class="page-header">
+                        <h1>输入框下拉列表
+                        <small><a target="_blank" href="downLoad/jsDownload/inputList.js">inputList.js</a></small>
+                        </h1>
+                    </div>
+                    <h2>输入框下拉列表案例</h2>
+                    <p>下面就是一个“输入框下拉列表组件”的案例。</p>
+                    <div class="bs-docs-example">
+                        <div class="input_id">
+                            <input id="userName" name="userName" maxlength="20" type="text" data-default="请输入您的社区账户">
+                            <div id="email_tips" class="email_tips" style="display: none;">
+                                <ul>
+                                    <li>
+                                        <span name="spanUserName">stuu</span><span class="msg" name="delUserName"></span>
+                                    </li>
+                                    <li class="" style="cursor: pointer;">
+                                        <span name="spanUserName">qshd01</span><span class="msg" name="delUserName"></span>
+                                    </li>
+                                    <li class="" style="cursor: pointer;">
+                                        <span name="spanUserName">stuu2</span><span class="msg" name="delUserName"></span>
+                                    </li>
+                                    <li class="" style="cursor: pointer;">
+                                        <span name="spanUserName">qshd02</span><span class="msg" name="delUserName"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <label name="userNameDefault" style="color: rgb(153, 153, 153);">请输入您的社区账户</label>
+                        </div>
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"input_id"</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"userName"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"userName"</span><span class="pln"> </span><span class="atn">maxlength</span><span class="pun">=</span><span class="atv">"20"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">data-default</span><span class="pun">=</span><span class="atv">"请输入您的社区账户"</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"email_tips"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"userName"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"display: none;"</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;ul</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;li</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"spanUserName"</span><span class="tag">&gt;</span>stuu<span class="tag">&lt;/span</span><span class="tag">&gt;</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"msg"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"delUserName"</span><span class="tag">&gt;</span><span class="tag">&lt;/span</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;/li</span><span class="tag">&gt;</span></li>  ... <li><span class="tag">&lt;/ul</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;label</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"userNameDefault"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"color: rgb(153, 153, 153);"</span><span class="tag">&gt;</span>请输入您的社区账户<span class="tag">&lt;/label</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">inputList.init</span><span class="pun">()</span></li></ol></pre>
+                </section>
+                <section id="dialogMod">
+                    <div class="page-header">
+                        <h1>弹出框
+                        <small><a target="_blank" href="downLoad/jsDownload/dialog.js">dialog.js</a></small></h1>
+                    </div>
+                    <h2>弹出框案例</h2>
+                    <p>下面就是一个“弹出框组件”的案例。</p>
+                    <div class="bs-docs-example">
+                        <input type="button" onclick='promptMessageDialog("弹出框组件测试！", false, false);' value="打开弹出框" />
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"promptMessageDialog("弹出框组件测试！", false, false);"</span><span class="tag">&gt;</span></li></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">promptMessageDialog</span><span class="pun">("弹出框组件测试！", false, false)</span></li></ol></pre>
+                    <h3>参数说明</h3>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td>参数1</td>
+                                <td>33</td>
+                                <td>列表数据总数</td>
+                            </tr>
+                            <tr>
+                                <td>参数2</td>
+                                <td>false</td>
+                                <td>是否在弹窗中再弹出一个框</td>
+                            </tr>
+                            <tr>
+                                <td>参数3</td>
+                                <td>false</td>
+                                <td>是否自动关闭；如果是“true”则会在5秒钟之后自动关闭此弹出框</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="pageMod">
+                    <div class="page-header">
+                        <h1>分页
+                        <small><a target="_blank" href="downLoad/jsDownload/page.js">page.js</a></small>
+
+                        </h1>
+                    </div>
+                    <h2>分页案例</h2>
+                    <p>下面就是一个“分页组件”的案例。</p>
+                    <div class="bs-docs-example">
+                        <div id="commentPageNum" class="page"></div>
+                    </div>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"page"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"commentPageNum"</span><span class="tag">&gt;</span><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">var requestMenberpage = new jsPage</span><span class="pun">(33, "commentPageNum", "5", requesturl, requestdata, responsevent, currentpagenum); </span></li><li class="L0"><span class="pln">pageMethod.call</span><span class="pun">(requestMenberpage);</span></li></ol></pre>
+                    <h3>参数说明</h3>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <td>参数1</td>
+                                <td>33</td>
+                                <td>列表记录的总数</td>
+                            </tr>
+                            <tr>
+                                <td>参数2</td>
+                                <td>commentPageNum</td>
+                                <td>分页插件最外层div的id</td>
+                            </tr>
+                            <tr>
+                                <td>参数3</td>
+                                <td>5</td>
+                                <td>每页显示的条数</td>
+                            </tr>
+                            <tr>
+                                <td>参数4</td>
+                                <td>requesturl</td>
+                                <td>列表数据请求的URL地址</td>
+                            </tr>
+                            <tr>
+                                <td>参数5</td>
+                                <td>requestdata</td>
+                                <td>列表数据请求的c参数</td>
+                            </tr>
+                            <tr>
+                                <td>参数6</td>
+                                <td>responsevent</td>
+                                <td>列表数据请求的回调函数</td>
+                            </tr>
+                            <tr>
+                                <td>参数7</td>
+                                <td>currentpagenum</td>
+                                <td>当前的页码编号</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="backTop">
+                    <div class="page-header">
+                        <h1>回到顶部
+                        <small><a target="_blank" href="downLoad/jsDownload/toTop.js">toTop.js</a></small>
+                        </h1>
+                    </div>
+                    <h2>回到顶部案例</h2>
+                    <p>回到顶部案例就在页面右下角位置</p>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"floatBox"</span><span class="atn">style</span><span class="pun">=</span><span class="atv">"position: fixed; _position: absolute; right: 0px; bottom: 0px;"</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"feedback grayTxt"</span><span class="tag">&gt;</span>用户反馈<span class="tag">&lt;/div</span><span class="pln"> </span><span class="tag">&gt;</span></li><li><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"backTop"</span><span class="atn">style</span><span class="pun">=</span><span class="atv">"display: none;"</span><span class="tag">&gt;</span><span class="tag">&lt;/div</span><span class="tag">&gt;</span><span class="tag">&lt;span</span><span class="tag">&gt;</span><span class="tag">&lt;/span</span><span class="tag">&gt;</span></li><li><span class="tag">&lt;/div</span><span class="pln"> </span><span class="tag">&gt;</span></li></ol></pre>
+                    <h2>调用方式</h2>
+                    <h3>通过JavaScript</h3>
+                    <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">feedbackAndTotop</span><span class="pun">()</span></li></ol></pre>
+                </section>
+                <div class="floatBox" style="position: fixed; _position: absolute; right: 0px; bottom: 0px;">
+                    <div class="feedback grayTxt">用户反馈</div>
+                    <div class="backTop" style="display: none;"><span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            视觉，CSS,JS规范
+        </p>
+    </div>
+
+    <!-- 侧边栏置顶悬浮的js -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/application.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/feature.js"></script>
+    <script src="assets/js/dialog.js"></script>
+    <script src="assets/js/page.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            likeOrNolike.init();
+            playPic.initPicPlayer($('div[name="imgIndex"] a'), 'LoginAlbumConDiv',655);
+            feedbackAndTotop();
+            $("div.resultsBox").jscroll({ W: "8px" });
+            inputList.init();
+            initAlumList();
+            var requestMenberpage = new jsPage(33, "commentPageNum", "5", '', null, pageSuccess, 3);
+            pageMethod.call(requestMenberpage);
+            loadMore.init('http://dev.dodoedu.com/Home/allNews', 'target=all&scope=all', initList);
+        }
+    </script>
+</body>
+</html>
