@@ -14,9 +14,10 @@
 </head>
 <body style="font-size:14px;"> 
 <div class="frame_top">
-     <a href="form.html">表单样式</a>
-     <a href="js_group.html">js组件</a>
-    <a href="../../doc/index.html">返回多多社区标准v1.0</a>
+     <a href="index.php" style="background-color:blue;">基本样式</a>
+     <a href="form.html" style="background-color:#919191;">表单样式</a>
+     <a href="js_group.html" style="background-color:#919191;">js组件</a>
+    <a href="../doc/index.html" style="background-color:#919191;">返回多多社区标准v1.0</a>
 </div>
 <div class="quick-nav" style="position:fixed; top:58px; left:5px;">
         <ul> 
