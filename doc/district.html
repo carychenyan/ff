@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>DISTRICT(局部区域)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+<link href="assets/css/shCoreDefault.css" rel="stylesheet">
+<link href="assets/css/component.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.js"></script>
+<![endif]-->
+<!-- Le fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+<style type="text/css">
+h1, h2, h3, .masthead p, .subhead p, .marketing h2, .lead
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+  font-weight: normal;
+}
+#scrollUp1 {
+  bottom: 20px;
+  right: 20px;
+  height: 38px;  /* Height of image */
+  width: 38px; /* Width of image */
+  background: url("assets/img/top.png") no-repeat;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="./index.html">DodoEDU</a>
+			<div class="nav-collapse collapse navbar-inverse-collapse">
+				<ul class="nav">
+					<li><a href="./index.html">首页</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">视觉规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="shape.html">图标库/设计规范</a></li>
+						<li><a href="logo.html">LOGO规范/文档</a></li>
+						<li><a href="color.html">色彩规范/文档</a></li>
+						<li><a href="banner.html">Bannerd设计规范</a></li>
+					</ul>
+					</li>
+					<li><a href="text.html">文案</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">前端规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="css_guideline.html">W3C/CSS规范</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web控件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="layout.html">网页排版</a></li>
+						<li class="active"><a href="district.html">顶部/底部区域</a></li>
+						<li><a href="base-css.html">基础css样式、表单</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web组件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="components_first.html">第一部分</a></li>
+						<li><a href="components_second.html">第二部分</a></li>
+						<li><a href="components_third.html">第三部分</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">JS功能<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="jsModul.html">JS自定义功能</a></li>
+						<li><a href="jsDev.html">JS第三方插件</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">其它<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="mobile.html">移动浏览器</a></li>
+						<li><a href="workflow.html">前端流程</a></li>
+					</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+<div class="container">
+	<h1>局部区域</h1>
+	<p class="lead">
+		网页基本元素的设置和风格的重新定义（排版相关元素请查看排版）
+	<!-- 	<a href="">GUI.psd下载</a>|<a href="">下载</a> -->
+	</p>
+</div>
+</header>
+<div class="container">
+	<!-- Docs nav
+    ================================================== -->
+	<div class="row">
+
+		<div class="span3 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav">
+			<li><a href="#use">使用说明</a></li>
+			<li><a href="#top_bar">顶部区域(top)</a></li>
+			<li><a href="#bottom_bar">底部区域（bottom）</a></li>
+            </ul>
+		</div>
+		<div class="span9">
+			<section id="forms">
+			<div class="page-header">
+				<h1>局部区域</h1>
+				<p><a href="assets/psd/district.psd"><img src="assets/img/psdIcon.png" alt=""/>psd文件</a><a href="assets/docs/web_controls/district.docx"><img src="assets/img/docIcon.png" alt=""/>Word文件。</a></p>
+				<p>1.局部区域，设计上应该简洁、统一，不应出现太多的变化。以维护和保持品牌形象的统一。<br>2.统一，固定的顶部或底部区域，有利于用户识别，网站的防盗和钓鱼网站，给人以安全和信任感<br>
+			3.局部区域的统一调配，视觉上减少了网站给人带来的杂乱感<br>
+4.局部区域的统一调配，有利于提高开发和制作的效率,减少和避免重复的开发</p>
+
+			</div>			
+			<h2 id="use">使用说明</h2>
+			<p>1.	此处为要求统一使用的样式。<span class="label label-important">若需要其他的样式和变化，在通过评审后，方能使用；使用后需补入到该页面。</span><br>
+2.	个别需要背景变化的，可以适当的调整背景色，连接色。但文字内容，板式不可改变
+</p>
+			<p><img src="assets/pics/district/bottom-bar.jpg" alt="" /></p>
+			<h2 id="top_bar">顶部区域(top)</h2>
+			<p>1.	宽度目前定的是960PX,可以依据实际情况，调大空白区域。<br>
+2.	矮顶部栏：有个一像素的底部描边，区分内容与功能；改样式时候紧凑的排版以及固定悬浮的风格<br>
+3.	高顶部栏：适合宣传单页等页面内容较少，表现需求丰富的页面
+</p>
+			<h2 id="bottom_bar">底部区域（bottom）</h2>
+			<p><img src="assets/pics/district/bottom-bar_MarkMan.png" alt="" /></p>
+			<p>1.	宽度目前定的是960PX,可以依据实际情况，调大空白区域。<br>
+2.	左右撑满板式：适合功能性，内容角度的页面<br>
+3.	居中对齐板式：适合宣传单页等页面内容较少，表现需求丰富的区域
+</p>
+             <p>DEMO：<a href="downLoad/component.rar" title=""><img src="assets/img/rarIcon.png" alt="">component</a> 中footer.html</p>
+			<div class="bs-docs-example" style="font-size:12px;">
+            	<div class="customFooter">
+                    <span class="floatR"><a href="http://static.dodoedu.com/shequPage/doc/多多社区用户使用手册.pdf" target="_black">用户手册</a> | <a href="http://static.dodoedu.com/shequPage/user/login/jobs.html" target="_black">招聘信息</a> | <a href="http://www.dodoedu.com/site/57900116/" target="_black">开发小组</a></span>
+                    主管：湖北省教育厅　主办：长江出版传媒股份有限公司 湖北省教育信息化发展中心　承办：湖北博盛数字教育服务有限公司<br><span style="display:inline-block; vertical-align:top;*vertical-align:middle;margin:0 5px 0 0;"><script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA1MTExM180NDU4MV80MDA4ODY2NTYxXw"></script></span>服务邮箱：services@dodoedu.com  客服热线：400-8866-561 鄂ICP备09022670号-3
+                </div>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&#8203;&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customFooter"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatR"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"..."</code> <code class="html color1">target</code><code class="html plain">=</code><code class="html string">"_black"</code><code class="html plain">&gt;用户手册&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt; | &lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"..."</code> <code class="html color1">target</code><code class="html plain">=</code><code class="html string">"_black"</code><code class="html plain">&gt;招聘信息&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt; | &lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"..."</code><code class="html plain">&gt;开发小组&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">主管：湖北省教育厅　主办：长江出版传媒股份有限公司 湖北省教育信息化发展中心　承办：湖北博盛数字教育服务有限公司</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">br</code><code class="html plain">&gt;&lt;</code><code class="html keyword">span</code> <code class="html color1">style</code><code class="html plain">=</code><code class="html string">"display:inline-block; vertical-align:top;*vertical-align:middle;margin:0 5px 0 0;"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">script</code> <code class="html color1">charset</code><code class="html plain">=</code><code class="html string">"utf-8"</code> <code class="html color1">type</code><code class="html plain">=</code><code class="html string">"text/javascript"</code> <code class="html color1">src</code><code class="html plain">=</code><code class="html string">"..."</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;服务邮箱：services@dodoedu.com&nbsp; 客服热线：400-8866-561 鄂ICP备09022670号-3</code></div><div class="line number5 index4 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+			</section>
+</div>
+		</div>
+</div>
+	<div class="footer">
+		<p>
+			版本 0.5（2013-10）
+			<a href="change_log.html">版本日志</a>
+			|
+			<a href="#">BUG反馈</a>
+			（指向BUG平台）
+				|
+			<a href="#">使用建议</a>
+			（指向BUG平台）
+		</p>
+	</div>
+
+<!-- Le javascript
+    ================================================== -->
+    <!-- 侧边栏置顶悬浮的js -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/application.js"></script>
+	<script src="assets/js/bootstrap-affix.js"></script>    
+	<script src="assets/js/bootstrap-dropdown.js"></script>
+</body>
+</html>

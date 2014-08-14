@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>WEB组件(三)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+<link href="assets/css/shCoreDefault.css" rel="stylesheet">
+<link href="assets/css/component.css" rel="stylesheet">
+<link href="assets/css/table.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.js"></script>
+<![endif]-->
+<style type="text/css">
+h1, h2, h3, h4, h5, h6, .masthead p, .subhead p, .marketing h2, .lead {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	font-weight: normal;
+}
+#scrollUp1 {
+	bottom: 20px;
+	right: 20px;
+	height: 38px;  /* Height of image */
+	width: 38px; /* Width of image */
+	background: url("assets/img/top.png") no-repeat;
+}
+</style>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="brand" href="./index.html">DodoEDU</a>
+      <div class="nav-collapse collapse navbar-inverse-collapse">
+        <ul class="nav">
+          <li><a href="./index.html">首页</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">视觉规范 <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="shape.html">图标库/设计规范</a></li>
+            <li><a href="logo.html">LOGO规范/文档</a></li>
+            <li><a href="color.html">色彩规范/文档</a></li>
+            <li><a href="banner.html">Bannerd设计规范</a></li>
+          </ul>
+          </li>
+          <li><a href="text.html">文案</a></li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">前端规范 <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="css_guideline.html">W3C/CSS规范</a></li>
+          </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web控件<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="layout.html">网页排版</a></li>
+            <li><a href="district.html">顶部/底部区域</a></li>
+            <li><a href="base-css.html">基础css样式、表单</a></li>
+          </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web组件<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="components_first.html">第一部分</a></li>
+            <li><a href="components_second.html">第二部分</a></li>
+            <li class="active"><a href="components_third.html">第三部分</a></li>
+          </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">JS功能<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="jsModul.html">JS自定义功能</a></li>
+            <li><a href="jsDev.html">JS第三方插件</a></li>
+          </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">其它<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="mobile.html">移动浏览器</a></li>
+            <li><a href="workflow.html">前端流程</a></li>
+          </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>WEB组件(三)</h1>
+    <p class="lead"> （一）页面指示器、加载动画（二）提示、下拉菜单、按钮 （三）Tab选项卡 </p>
+  </div>
+</header>
+<div class="container"> 
+  <!-- Docs nav
+    ================================================== --> 
+  <div class="row">
+    <div class="span3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav">
+        <li><a href="#tabs"><i class="icon-chevron-right"></i>Tab选项卡</a></li>
+        <li><a href="#table"><i class="icon-chevron-right"></i>表格</a></li>
+      </ul>
+    </div>
+    <div class="span9"> 
+      <!-- tabs
+        ================================================== -->
+      <section id="tabs">
+        <div class="page-header">
+          <h1>Tab选项卡</h1>
+          <p> 选项卡即切换选项的模块，不需切换页面，在当前窗口中就可以看到不同模块的内容。 </p>
+        <p>DEMO：<a href="downLoad/component.rar" title=""><img src="assets/img/rarIcon.png" alt="">component</a> 中 tab.html</p>
+        </div>
+        <h2>交互描述</h2>
+        <p> 可以将信息进行良好的层叠和隐藏，节省界面的空间。<br>
+          较复杂的选显卡或可实时更新数据的选显卡，根据实际情况加入适当加入加载动画选项<br>
+          选项卡的选中和未选中状态应该要区分 </p>
+        <h2>设计描述</h2>
+        <p> 1.Tab的内容间距的调整，如：文字为tab的居中对齐<br>
+          2.Tab的功能区域的重新组合，如：发布作业模块，附件和内容区域应该相邻<br>
+          3.Tab的可点，状态，与输入框的区分<br>
+          4.个别图标的更新和统一。主要做了抗锯齿，去掉半像素，统一视觉风格。 </p>
+        <h2>调用方法</h2>
+        <h3>Tab1</h3>
+        <p>使用<strong>选项卡样式1</strong>，需给<code>ul</code>指定类名<code>.tab1Menu</code>，<code>li</code>指定类名<code>.menuCell</code>，内部<code>a</code>链接指定类名<code>.tabLink</code>，以明确指向.</p>
+        <p><code>.floatL</code> 目标向左浮动.</p>
+        <p><code>.clear</code> 加上该类可以让浮动特性中断，此后，恢复正常文档流.</p>
+        <p><code>.tabMenuCurrent</code> 选定后状态的类名.</p>
+        <div class="bs-docs-example">
+            <div class="tabExample">
+              <ul class="tab1Menu">
+                <li class="menuCell tabMenuCurrent floatL"><a href="" title="" class="tabLink">全部</a></li>
+                <li class="menuCell floatL"><a href="" title="" class="tabLink">推荐给我的</a></li>
+                <li class="menuCell floatL"><a href="" title="" class="tabLink">未回答</a></li>
+                <li class="clear"></li>
+              </ul>
+            </div>
+        </div>
+        <div class="prettyprint linenums">
+<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tab1Menu"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell tabMenuCurrent floatL"</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;全部&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell floatL"</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;推荐给我的&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+        </div>
+        <p>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        <h3>Tab2</h3>
+        <p>使用<strong>选项卡样式2</strong>，需给<code>ul</code>指定类名<code>.tab2Menu</code>，<code>li</code>指定类名<code>.menuCell</code>，内部<code>a</code>链接指定类名<code>.tabLink</code>，以明确指向.</p>
+        <p><code>.floatL</code> 目标向左浮动.</p>
+        <p><code>.clear</code> 加上该类可以让浮动特性中断，此后，恢复正常文档流.</p>
+        <p><code>.tabMenuCurrent</code> 选定后状态的类名.</p>
+        <div class="bs-docs-example">
+            <div class="tabExample">
+              <ul class="tab2Menu"><li class="menuCell tabMenuCurrent floatL"><a href="" title="" class="tabLink">日记</a></li>
+            　　<li class="menuCell floatL"><a href="" title="" class="tabLink">讨论</a></li>
+            　　<li class="menuCell floatL"><a href="" title="" class="tabLink">回答</a></li>
+            　　<li class="clear"></li>
+              </ul>
+            </div>
+        </div>
+        <div class="prettyprint linenums">
+<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tab2Menu"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell tabMenuCurrent floatL"</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;日记&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell floatL"</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;讨论&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell floatL"</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;回答&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>        
+		</div>
+        <p>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        <h3>Tab3</h3>
+        <p>使用<strong>选项卡样式3</strong>，需给<code>ul</code>指定类名<code>.tab3Menu</code>，<code>li</code>指定类名<code>.menuCell</code>，内部<code>a</code>链接指定类名<code>.tabLink</code>，以明确指向</p>
+        <p><code>.SQ_navIcon1</code>等，显示为彩色图标</p>
+        <p><code>.SQ_navIcon1Gray</code>等，显示为灰色图标</p>
+        <p><code>.floatL</code> 目标向左浮动</p>
+        <p><code>.clear</code> 加上该类可以让浮动特性中断，此后，恢复正常文档流</p>
+        <p><code>.tabMenuCurrent</code> 选定后状态的类名</p>
+        <div class="bs-docs-example">
+            <div class="tabExample">
+              <ul class="tab3Menu"><li class="menuCell tabMenuCurrent floatL"><a href="" title="" class="tabLink"><i class="SQ_navIcon1"></i>新鲜事儿</a></li>
+            　　<li class="menuCell floatL"><a href="" title="" class="tabLink"><i class="SQ_navIcon10Gray"></i>站内信</a></li>
+            　　<li class="menuCell floatL"><a href="" title="" class="tabLink"><i class="SQ_navIcon5Gray"></i>日记</a></li>
+            　　<li class="clear"></li>
+              </ul>
+            </div>
+        </div>
+        <div class="prettyprint linenums">
+<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tab3Menu"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell tabMenuCurrent floatL"</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"SQ_navIcon1"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;新鲜事儿&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell floatL"</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"SQ_navIcon10Gray"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;站内信&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell floatL"</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tabLink"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"SQ_navIcon5Gray"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;日记&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="html plain">　　&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>		</div>
+        <p>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                <h3>Tab4</h3>
+        <p>使用<strong>选项卡样式4</strong>，需给<code>ul</code>指定类名<code>.tab4Menu</code>，<code>li</code>指定类名<code>.menuCell</code></p>
+        <p><code>.LWhiteA</code> <code>a</code>链接样式1</p>
+        <p><code>.LWhiteAB</code> <code>a</code>链接样式2</p>
+        <p><code>.SQ_navIcon1</code>等，显示为彩色图标</p>
+        <p><code>.SQ_navIcon7White</code>等，显示为白色图标</p>
+        <p><code>.floatR</code> 目标向右浮动</p>
+        <p><code>.tabMenuCurrent</code> 选定后状态的类名</p>
+        <p><code>.tabMenuHover</code> 鼠标移至目标状态的类名</p>
+        <div class="bs-docs-example">
+            <div class="tabExample">
+            	<div class="tab4MenuWrap">
+                    <ul class="tab4Menu">
+                        <li class="menuCell tabMenuCurrent">
+							<a href="#" title="" target="_blank" name="wordLink"><i class="SQ_navIcon1"></i>新鲜事儿</a>
+                        </li>
+                        <li class="menuCell">
+                            <a href="#" title="" target="_blank" name="quickLink" class="floatR LWhiteAB">发表</a>
+                            <a href="#" title="" target="_blank" name="wordLink" class="LWhiteA"><i class="SQ_navIcon5"></i>日记</a>
+                        </li>
+                        <li class="menuCellLine"></li>
+                        <li class="menuCell">
+                            <a href="#" title="" target="_blank" name="wordLink" class="LWhiteA"><i class="SQ_navIcon7White"></i>应用中心</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="prettyprint linenums">
+<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"tab4Menu"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell tabMenuCurrent"</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">target</code><code class="html plain">=</code><code class="html string">"_blank"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"SQ_navIcon1"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;新鲜事儿&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell"</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">target</code><code class="html plain">=</code><code class="html string">"_blank"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatR LWhiteAB"</code><code class="html plain">&gt;发表&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">target</code><code class="html plain">=</code><code class="html string">"_blank"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"LWhiteA"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"SQ_navIcon5"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;日记&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCellLine"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"menuCell tabMenuHover"</code><code class="html plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">"#"</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">target</code><code class="html plain">=</code><code class="html string">"_blank"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"LWhiteA"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"SQ_navIcon7White"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;应用中心&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>		</div>
+<!--         <p>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        <h2>插件扩展（可选项）</h2> -->
+      </section>
+      
+      <!-- table
+        ================================================== -->
+			<section id="table">
+        <div class="page-header">
+          <h1>表格样式</h1>
+          <p> 主要应用于后台，使用需要引入“css/table.css”</p>
+        </div>
+
+        <div class="exampleWrap"><h3>默认样式</h3><table class="tableSet" id="tableTest" ><!-- 可以在class中加入tableSet-inbox或tableSet-noborder分别适应不同的情况 --><!-- 有边框 --><thead><tr><th isAsc="true" isInt="true" id="createTime" isOrder="true" thIndex="0">创建时间</th><th isAsc="true" id="name" isOrder="true" thIndex="1">名称 <em class="ft-bar">|</em>交易号</th><th isAsc="true" isInt="false" id="name" isOrder="true" thIndex="2">对方</th><th isAsc="true" isInt="true" id="name" isOrder="true" thIndex="3">金额 <em class="ft-bar">|</em>明细</th><th>状态</th><th>操作</th><th>备注</th></tr></thead><!-- 表头可选 --><tbody><tr><td>2013-10-11</td><td>DDa3ta</td><td>Lucy</td><td>1312</td><td></td><td></td><td></td></tr><tr class="tableSet-split"><td>2014-10-11</td><td>DDa3ta</td><td>Lucy1</td><td>312</td><td>SAD7ata</td><td>!!Da8ta</td><td>+AADa9ta</td></tr><tr><td>2014-11-11</td><td>02DDa3ta</td><td>0Lucy</td><td>054</td><td>SAD7ata</td><td>!!Da8ta</td><td>+AADa9ta</td></tr><tr class="tableSet-split"><td>2011-10-11</td><td>32</td><td>11224</td><td>232</td><td>0</td><td>05</td><td>11</td></tr><tr><td>2014-10-12</td><td>Data</td><td>Olya</td><td>73</td><td>Data</td><td>Data</td><td>Data</td></tr></tbody><tfoot><tr><td colspan="7">表尾数据</td></tr></tfoot><!-- 表尾可选 --> </table></div><div class="exampleWrap"><!-- 无边框 --><h3>无边框</h3><table class="tableSet tableSet-noborder"><tbody><tr><td>1</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr><tr class="tableSet-split"><td>2</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr><tr><td>3</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr><tr class="tableSet-split"><td>4</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr></tbody></table></div><div class="exampleWrap"><table class="tableSet tableSet-inbox"><!-- 可以在class中加入tableSet-inbox或tableSet-noborder分别适应不同的情况 --><h3>底部分割线</h3><thead><tr><th>创建时间<i class="icon_downArrStyle2"></i></th><th>名称<em class="ft-bar">|</em>交易号</th><th>对方</th><th>金额<em class="ft-bar">|</em>明细</th><th>状态</th><th>操作</th><th>备注</th></tr></thead><!-- 表头可选 --><tbody><tr><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td class="tableSet-action">Data</td><td>Data</td></tr><tr class="tableSet-split"><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td class="tableSet-action">Data</td><td>Data</td></tr></tbody></table></div>
+			</section>
+
+			      <!-- form
+        ================================================== -->
+      <section id="form">
+        <div class="page-header">
+          <h1>表格样式</h1>
+          <p> 主要应用于后台，使用需要引入“css/table.css”</p>
+        </div>
+
+        <div class="exampleWrap"><h3>默认样式</h3><table class="tableSet" id="tableTest" ><!-- 可以在class中加入tableSet-inbox或tableSet-noborder分别适应不同的情况 --><!-- 有边框 --><thead><tr><th isAsc="true" isInt="true" id="createTime" isOrder="true" thIndex="0">创建时间</th><th isAsc="true" id="name" isOrder="true" thIndex="1">名称 <em class="ft-bar">|</em>交易号</th><th isAsc="true" isInt="false" id="name" isOrder="true" thIndex="2">对方</th><th isAsc="true" isInt="true" id="name" isOrder="true" thIndex="3">金额 <em class="ft-bar">|</em>明细</th><th>状态</th><th>操作</th><th>备注</th></tr></thead><!-- 表头可选 --><tbody><tr><td>2013-10-11</td><td>DDa3ta</td><td>Lucy</td><td>1312</td><td></td><td></td><td></td></tr><tr class="tableSet-split"><td>2014-10-11</td><td>DDa3ta</td><td>Lucy1</td><td>312</td><td>SAD7ata</td><td>!!Da8ta</td><td>+AADa9ta</td></tr><tr><td>2014-11-11</td><td>02DDa3ta</td><td>0Lucy</td><td>054</td><td>SAD7ata</td><td>!!Da8ta</td><td>+AADa9ta</td></tr><tr class="tableSet-split"><td>2011-10-11</td><td>32</td><td>11224</td><td>232</td><td>0</td><td>05</td><td>11</td></tr><tr><td>2014-10-12</td><td>Data</td><td>Olya</td><td>73</td><td>Data</td><td>Data</td><td>Data</td></tr></tbody><tfoot><tr><td colspan="7">表尾数据</td></tr></tfoot><!-- 表尾可选 --> </table></div><div class="exampleWrap"><!-- 无边框 --><h3>无边框</h3><table class="tableSet tableSet-noborder"><tbody><tr><td>1</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr><tr class="tableSet-split"><td>2</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr><tr><td>3</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr><tr class="tableSet-split"><td>4</td><td>吴实</td><td><p>电话：13000111222</p><p>地址：武汉博盛数字公司</p></td><td>操作</td></tr></tbody></table></div><div class="exampleWrap"><table class="tableSet tableSet-inbox"><!-- 可以在class中加入tableSet-inbox或tableSet-noborder分别适应不同的情况 --><h3>底部分割线</h3><thead><tr><th>创建时间<i class="icon_downArrStyle2"></i></th><th>名称<em class="ft-bar">|</em>交易号</th><th>对方</th><th>金额<em class="ft-bar">|</em>明细</th><th>状态</th><th>操作</th><th>备注</th></tr></thead><!-- 表头可选 --><tbody><tr><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td class="tableSet-action">Data</td><td>Data</td></tr><tr class="tableSet-split"><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td>Data</td><td class="tableSet-action">Data</td><td>Data</td></tr></tbody></table></div>
+      </section>
+
+			<!-- lable
+        ================================================== 
+			<section id="lable">
+			<div class="page-header">
+				<h1>标签与徽章</h1>
+				<p>
+					快速区别关键字 关键词；视觉化来表现相关的荣誉
+				</p>
+			</div>
+			<h2>标签</h2>
+			<p>
+				标签需要与按钮区分开
+			</p>
+			<p>
+				<img src="assets/pics/lable1.png" alt="" class="thumbnail"/>
+			</p>
+			<p>
+				<img src="assets/pics/lable2.png" alt="" class="thumbnail"/>
+			</p>
+			<p>
+				<img src="assets/pics/lable3.png" alt="" class="thumbnail"/>
+			</p>
+			<h2>徽章</h2>
+			<p>
+				告知用户当前的数据为空。包含占位符，为空的
+				<a href="#">默认头像</a>。
+			</p>
+			</section>
+			<!-- img_switch
+        ================================================== 
+			<section id="img_switch">
+			<div class="page-header">
+				<h1>转换图</h1>
+				<p>
+					轮转展示banner,在有限的情况下，展示最多东西
+				</p>
+			</div>
+			<h2>描述</h2>
+			<p>
+				鼠标停留，加载优化或缓冲动画，切换
+			</p>
+			<p>
+				<img src="assets/pics/img_switch1.png" alt="" class="thumbnail"/>
+			</p>
+			<p>
+				<img src="assets/pics/img_switch2.png" alt="" class="thumbnail"/>
+			</p>
+			<p>
+				<img src="assets/pics/img_switch3.png" alt="" class="thumbnail"/>
+			</p>
+			</section>
+			<!-- img_switch
+        ================================================== 
+			<section id="progress_bar">
+			<div class="page-header">
+				<h1>进度条</h1>
+				<p>
+					轮转展示banner,在有限的情况下，展示最多东西
+				</p>
+			</div>
+			</section>
+			<!-- img_switch
+        ==================================================
+			<section id="calendar">
+			<div class="page-header">
+				<h1>日历</h1>
+				<p>
+					选择日历
+				</p>
+			</div>
+			<p>
+				<img src="assets/pics/calendar1.png" alt="" class="thumbnail"/>
+			</p>
+			</section>
+			<!-- img_switch
+        ================================================== 
+			<section id="info_flow">
+			<div class="page-header">
+				<h1>信息流</h1>
+				<p>
+					时间流状展示所有的信息
+				</p>
+			</div>
+			<p>
+				<img src="assets/pics/info_flow1.png" alt="" class="thumbnail"/>
+			</p>
+			<p>
+				<img src="assets/pics/info_flow2.png" alt="" class="thumbnail"/>
+			</p>
+			</section> --> 
+    </div>
+  </div>
+</div>
+  <div class="footer">
+    <p>
+      版本 0.5（2013-10）
+      <a href="change_log.html">版本日志</a>
+      |
+      <a href="#">BUG反馈</a>
+      （指向BUG平台）
+        |
+      <a href="#">使用建议</a>
+      （指向BUG平台）
+    </p>
+  </div>
+<!-- Le javascript
+    ================================================== --> 
+<!-- 侧边栏置顶悬浮的js --> 
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/js/tab.js"></script>
+<!--<script src="assets/js/application.js"></script>--> 
+<script src="assets/js/bootstrap-affix.js"></script>
+<script src="assets/js/bootstrap-dropdown.js"></script>
+</body>
+</html>

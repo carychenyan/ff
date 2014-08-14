@@ -1,0 +1,33 @@
+<MKM version="2.0" imageFileUrl="file:///E:/local_work/%e5%89%8d%e7%ab%af%e8%ae%be%e8%ae%a1%e6%a1%86%e6%9e%b6/docs/assets/psd/web-control.png">
+  <Marks>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="15066597" offsetX="25" offsetY="10" x="134" y="30"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="13421772" offsetX="28" offsetY="12" x="131" y="45"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="16250871" offsetX="41" offsetY="27" x="118" y="35"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="13421772" offsetX="28" offsetY="9" x="157" y="88"/>
+    <ColorMark defaultDirection="10" colorSystem="hex" direction="10" color="16711680" targetColor="16777215" offsetX="28" offsetY="5" x="157" y="80"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="13816530" offsetX="28" offsetY="1" x="157" y="74"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="3355443" offsetX="25" offsetY="10" x="184" y="134"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="13816530" offsetX="23" offsetY="12" x="186" y="151"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="6804381" offsetX="25" offsetY="10" x="475" y="118"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="12057258" offsetX="50" offsetY="23" x="450" y="117"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="3355443" offsetX="90" offsetY="52" x="410" y="130"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="16750950" offsetX="25" offsetY="10" x="203" y="205"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="16769383" offsetX="48" offsetY="21" x="180" y="204"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="3355443" offsetX="58" offsetY="11" x="170" y="222"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="16744816" offsetX="25" offsetY="10" x="398" y="205"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="14445676" offsetX="34" offsetY="6" x="389" y="217"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="16690304" offsetX="35" offsetY="23" x="388" y="204"/>
+    <LengthMark direction="12" color="16711680" length="9" x="41" y="307"/>
+    <LengthMark direction="3" color="16711680" length="9" x="70" y="291"/>
+    <LengthMark direction="3" color="16711680" length="9" x="70" y="314"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="5613664" offsetX="25" offsetY="10" x="156" y="421"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="0" offsetX="25" offsetY="10" x="157" y="523"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="16777215" offsetX="25" offsetY="10" x="362" y="827"/>
+    <LengthMark direction="12" color="16711680" length="9" x="41" y="946"/>
+    <LengthMark direction="3" color="16711680" length="10" x="57" y="929"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="153" y="866" textMaxWidth="358" offsetX="25" offsetY="10" text="多标签下面的配色"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="429" y="1223" textMaxWidth="237" offsetX="25" offsetY="10" text="一般文本在显示的时候，要保证左右段落的劲量对齐&#xD;&#xD;文本的行高也建议为1.2em"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="560" y="393" textMaxWidth="100" offsetX="25" offsetY="10" text="失效"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="187" y="281" textMaxWidth="238" offsetX="25" offsetY="10" text="输入框和文本的扩展区域"/>
+  </Marks>
+</MKM>

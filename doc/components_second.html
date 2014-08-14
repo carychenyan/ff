@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>WEB组件(二)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="assets/css/docs.css" rel="stylesheet">
+<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+<link href="assets/css/shCoreDefault.css" rel="stylesheet">
+<link href="assets/css/component.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.js"></script>
+<![endif]-->
+<style type="text/css">
+h1, h2, h3,h4,h5,h6, .masthead p, .subhead p, .marketing h2, .lead
+{
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+  font-weight: normal;
+}
+#scrollUp1 {
+  bottom: 20px;
+  right: 20px;
+  height: 38px;  /* Height of image */
+  width: 38px; /* Width of image */
+  background: url("assets/img/top.png") no-repeat;
+}
+</style>
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="./index.html">DodoEDU</a>
+			<div class="nav-collapse collapse navbar-inverse-collapse">
+				<ul class="nav">
+					<li><a href="./index.html">首页</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">视觉规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="shape.html">图标库/设计规范</a></li>
+						<li><a href="logo.html">LOGO规范/文档</a></li>
+						<li><a href="color.html">色彩规范/文档</a></li>
+						<li><a href="banner.html">Bannerd设计规范</a></li>
+					</ul>
+					</li>
+					<li><a href="text.html">文案</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">前端规范 <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="css_guideline.html">W3C/CSS规范</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web控件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="layout.html">网页排版</a></li>
+						<li><a href="district.html">顶部/底部区域</a></li>
+						<li><a href="base-css.html">基础css样式、表单</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">web组件<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="components_first.html">第一部分</a></li>
+						<li  class="active"><a href="components_second.html">第二部分</a></li>
+						<li><a href="components_third.html">第三部分</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">JS功能<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="jsModul.html">JS自定义功能</a></li>
+						<li><a href="jsDev.html">JS第三方插件</a></li>
+					</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">其它<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="mobile.html">移动浏览器</a></li>
+						<li><a href="workflow.html">前端流程</a></li>
+					</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+<div class="container">
+	<h1>WEB组件(二)</h1>
+	<p class="lead">
+		（一）页面指示器、加载动画（二）提示、下拉菜单、按钮 （三）Tab选项卡
+	</p>
+</div>
+</header>
+<div class="container">
+	<!-- Docs nav
+    ================================================== -->
+	<div class="row">
+		<div class="span3 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav">
+				<!--<li class="dropdown-submenu">
+				<a tabindex="-1" href="#info_tips">信息提示</a>
+				<ul class="dropdown-menu">
+					<li><a tabindex="-1" href="#">为空（头像/图片）</a></li>
+					<li><a tabindex="-1" href="#">网络404</a></li>
+					<li><a tabindex="-1" href="#">加载动画</a></li>
+					<li><a tabindex="-1" href="#">警告框</a></li>
+				</ul>
+				</li>
+				-->
+				<li><a href="#info_tips"><i class="icon-chevron-right"></i> 信息提示</a></li>
+				<li><a href="#dropdowns"><i class="icon-chevron-right"></i> 下拉菜单</a></li>
+				<li><a href="#btns"><i class="icon-chevron-right"></i> 按钮</a></li>
+			</ul>
+		</div>
+		<div class="span9">
+			<!-- info_tips
+        ================================================== -->
+			<section id="info_tips">
+			<div class="page-header">
+				<h1>信息提示</h1>
+				信息提示，是告知用户操作行为的一种手段。我们一般遵循的原则是:1.轻量级，劲量减少对用户的干扰 2.重量级，劲量减少和避免设计方面给用户带来的误操作<br>
+				具体描述的word文档地址：<a href="assets/docs/web_controls/dropdown.docx"><img src="assets/img/docIcon.png" alt=""/>前端设计框架</a>
+				<a href="assets/psd/info_tips.psd"><img src="assets/img/psdIcon.png" alt=""/>psd文件已发布</a>
+               	<p>DEMO：<a href="downLoad/component.rar" title=""><img src="assets/img/rarIcon.png" alt="">component</a> 中tips.html</p>
+			</div>
+			<h2>交互描述</h2>
+			<p>
+				1.	行为描述：引导用户，告知用户的操作行为的过程、结果<br>
+2.	行为级别：
+				<br>
+				<span class="label label-inverse">最高级</span>：模态弹窗，直接打断用户当前操作。一般应用于操作确认，且对结果影响较大的用户操作；<br>
+				<span class="label label-inverse">中级</span>：一般弹窗，位置相对明显。一般应用于告知，对用户操作行为影响较小的提示。如：使用引导，局部加载动画等<br>
+				<span class="label label-inverse">微弱</span>：区域较小，自动展现和收缩。一般应用于频繁操作后的告知，常用功能的使用告知等<br>
+			</p>
+			<h2>设计描述</h2>
+			<p>
+				1.	优化提示框的图标<br>
+2.	优化和规范用色
+				<br>
+3.	Css重构和优化
+			</p>
+			<h2>多多社区案例归纳</h2>
+			<h3>Tips1（模态弹窗）</h3>
+			<p>
+				不同情况下的图标和颜色。成功，失败传达给用户的感情也是不一样的，所以颜色和图形上有区分
+			</p>
+            <div class="bs-docs-example">
+            	<div class="customTipsWrap width344">
+                    <i class="icon_error floatL"></i><div class="floatL width298 font14 paddingT3">你确定要删除此消息流吗？</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="customTipsWrap width344">
+                    <i class="icon_warning floatL"></i><div class="floatL width298 font14 paddingT3">你确定要删除此消息流吗？</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="customTipsWrap width344">
+                    <i class="icon_finish floatL"></i><div class="floatL width298 font14 paddingT3">添加成功</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customTipsWrap width344"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_error floatL"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatL width298 font14 paddingT3"</code><code class="html plain">&gt;你确定要删除此消息流吗？&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customTipsWrap width344"</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_warning floatL"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatL width298 font14 paddingT3"</code><code class="html plain">&gt;你确定要删除此消息流吗？&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customTipsWrap width344"</code><code class="html plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_finish floatL"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatL width298 font14 paddingT3"</code><code class="html plain">&gt;添加成功&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+			<h3>Tips2（浮层）</h3>
+			<p>
+				浮层提示，更具表现的内容不一样，颜色和按钮 应该也做区分
+			</p>
+            <div class="bs-docs-example font12">
+            	<div class="customTipsWrap tipsFinish width344">
+                    <i class="icon_finishSmall floatL"></i><div class="floatL width298">完成，成功。不会产生与用户期待想法的问题。</div><a href="" title="" class="floatR icon_forkGreen"></a>
+                    <div class="clear"></div>
+                </div>
+                <p></p>
+                <div class="customTipsWrap tipsWarning width344">
+                    <i class="icon_warningSmall floatL"></i><div class="floatL width298">警示，有问题请轻点链接</div><a href="" title="" class="floatR icon_forkOrange"></a>
+                    <div class="clear"></div>
+                </div>
+                <p></p>
+                <div class="customTipsWrap tipsError width344">
+                    <i class="icon_errorSmall floatL"></i><div class="floatL width298">错误。不会产生与用户期待想法的问题。</div><a href="" title="" class="floatR icon_forkRed"></a>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customTipsWrap width344"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_error floatL"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatL width298 font14 paddingT3"</code><code class="html plain">&gt;你确定要删除此消息流吗？&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customTipsWrap width344"</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_warning floatL"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatL width298 font14 paddingT3"</code><code class="html plain">&gt;你确定要删除此消息流吗？&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number11 index10 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customTipsWrap width344"</code><code class="html plain">&gt;</code></div><div class="line number12 index11 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_finish floatL"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"floatL width298 font14 paddingT3"</code><code class="html plain">&gt;添加成功&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+			<h3>Tips3（状态，文字提示）</h3>
+			<p>
+				文字虽然简单，也就将就一个大致的排版对齐和空间
+			</p>
+            <div class="bs-docs-example font12">
+            	<div class="customTipsNoCon">
+                    目前还没有内容显示喔。
+                </div>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  as3"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="as3 plain">&lt;div </code><code class="as3 color3">class</code><code class="as3 plain">=</code><code class="as3 string">"customTipsNoCon"</code><code class="as3 plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="as3 spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="as3 plain">目前还没有内容显示喔。</code></div><div class="line number3 index2 alt2"><code class="as3 plain">&lt;/div&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+			<h3>Tips4（选定后提示）</h3>
+                <p>选择联系人弹框中已选定某群体后的状态</p>
+				<div class="bs-docs-example font12">
+                	<div class="customTipsWrap tipsSelected width344">
+                        <span class="active"><i class="icon_hookStyle1 floatR"></i>这里是文字<div class="clear"></div></span>
+                    </div>
+                </div>
+                <div class="prettyprint linenums">
+                	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customTipsWrap tipsSelected width344"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"active"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_hookStyle1 floatR"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;这里是文字&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"clear"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+                </div>
+
+			</section>
+			<!-- Dropdowns
+        ================================================== -->
+			<section id="dropdowns">
+			<div class="page-header">
+				<h1>下拉菜单</h1>
+				<p>
+					具体描述的word文档地址：<a href="assets/docs/web_controls/dropdown.docx"><img src="assets/img/docIcon.png" alt=""/>前端设计框架\docs\assets\docs\web_controls\dropdown.docx</a>
+					<a href="assets/psd/dropdown.psd"><img src="assets/img/psdIcon.png" alt=""/>psd文件已发布</a>
+				</p>
+               	<p>DEMO：<a href="downLoad/component.rar" title=""><img src="assets/img/rarIcon.png" alt="">component</a> 中dropdown.html</p>
+			</div>
+			<h2>交互描述</h2>
+			<p>
+		下拉列表可以将适当的内容隐藏，减少占用页面的面积和检索。下拉菜单的优势在于隐藏，但会增加适当的操作步骤。
+				</br>
+页面大功能，不适合放在下拉列表内部；
+				</br>
+列表内容较多的（20个左右），应考虑内容的组织，展现方式或用其他方式代替。
+				</br>
+列表的内容，不宜超过20个以上
+			</p>
+			<h2>设计描述</h2>
+			<p>
+1.	控件样式统一和美化
+				</br>
+2.	丰富和归纳控件的类型 ，状态样式
+				</br>
+3.	自定义样式（看本次是否需要）
+			</p>
+			<h2>多多社区案例归纳</h2>
+			<h3>dropdown1</h3>
+            <p><code>.customDropdownWrap</code> <code>.customDropdownStyle1</code> <code>.inlineBlock</code> 默认状态</p>
+            <p><code>.customDropdown1MouseOver</code> 鼠标移上去状态，方法：追加在默认状态样式之后</p>
+            <p><code>.customDropdown_selectedValue</code> 下拉列表中选定状态样式</p>
+            <div class="bs-docs-example font12">
+            	<div class="customDropdownWrap customDropdownStyle1 inlineBlock">
+                    <span class="dropdown_currentValue"><span class="dropdownTxt">全部应用</span><i class="icon_downArrStyle2"></i></span>
+                    <div class="dropdownItem width100">
+                        <ul class="dropdownItemUl">
+                            <li class="dropdownCell"><a href="#" title="" class="customDropdown_selectedValue">全部应用</a></li>
+                            <li class="dropdownCell"><a href="#" title="">博客</a></li>
+                            <li class="dropdownCell"><a href="#" title="">图片</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customDropdownWrap customDropdownStyle1 inlineBlock"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdown_currentValue"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownTxt"</code><code class="html plain">&gt;全部应用&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_downArrStyle2"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownItem width100"</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownItemUl"</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;全部应用&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customDropdown_selectedValue"</code><code class="html plain">&gt;博客&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;图片&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+            <h3>dropdown2</h3>
+            <p><code>.customDropdownWrap</code> <code>.customDropdownStyle2</code> <code>.inlineBlock</code> 默认状态</p>
+            <p><code>.customDropdown1MouseOver</code> <code>.customDropdown2MouseOver</code> 鼠标移上去状态，方法：追加在默认状态样式之后</p>
+            <div class="bs-docs-example font12">
+                <div class="customDropdownWrap customDropdownStyle2 inlineBlock">
+                    <span class="dropdown_currentValue"><img src="assets/img/egImg.jpg" width="18" class="marginR3" /><span class="dropdownTxt">人名人名</span><i class="icon_downArrStyle2"></i></span>
+                    <div class="dropdownItem width110">
+                        <ul class="dropdownItemUl">
+                            <li class="dropdownCell"><a href="#" title="">个人资料</a></li>
+                            <li class="dropdownCell"><a href="#" title="">密码安全</a></li>
+                            <li class="dropdownCell"><a href="#" title="">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customDropdownWrap customDropdownStyle2 inlineBlock"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdown_currentValue"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownTxt"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">img</code> <code class="html color1">src</code><code class="html plain">=</code><code class="html string">"images/egImg.jpg"</code> <code class="html color1">width</code><code class="html plain">=</code><code class="html string">"18"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"marginR3"</code> <code class="html plain">/&gt;人名人名&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_downArrStyle2"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownItem width110"</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownItemUl"</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;个人资料&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;密码安全&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;退出&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+            <h3>dropdown3</h3>
+            <p><code>.customDropdownWrap</code> <code>.customDropdownStyle3</code> <code>.inlineBlock</code> 默认状态</p>
+            <p><code>.customDropdown3MouseOver</code> 鼠标移上去状态，方法：追加在默认状态样式之后</p>
+            <p><code>.customDropdown_selectedValue</code> 下拉列表中选定状态样式</p>
+            <div class="bs-docs-example font12">
+            	<div class="customDropdownWrap customDropdownStyle3 inlineBlock">
+                    <span class="dropdown_currentValue"><span class="dropdownTxt">按时间排序</span><i class="icon_downArrStyle2"></i></span>
+                    <div class="dropdownItem width100">
+                        <ul class="dropdownItemUl">
+                            <li class="dropdownCell"><a href="#" title="" class="customDropdown_selectedValue">按时间排序</a></li>
+                            <li class="dropdownCell"><a href="#" title="">按热门排序</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customDropdownWrap customDropdownStyle3 inlineBlock"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdown_currentValue"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">span</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownTxt"</code><code class="html plain">&gt;按时间排序&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_downArrStyle2"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownItem width100"</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownItemUl"</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customDropdown_selectedValue"</code><code class="html plain">&gt;按时间排序&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"dropdownCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;按热门排序&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+			<h3>dropdown4（输入下拉提示）</h3>
+            <div class="bs-docs-example font12" style="z-index:1;">
+            	<div class="positionRelative">
+                    <input name="" type="text" class="customForm_inputBoxGetFocus1 customForm_txtInput  width330" value="这是一" />
+                    <ul class="associateWrap width348" style="visibility:hidden">
+                        <li class="associateCell"><a href="#" title="">这是一个词</a></li>
+                        <li class="associateCell"><a href="#" title="">这是一段话</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"positionRelative"</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">input</code> <code class="html color1">name</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">type</code><code class="html plain">=</code><code class="html string">"text"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customForm_inputBoxGetFocus1 customForm_txtInput&nbsp; width330"</code> <code class="html color1">value</code><code class="html plain">=</code><code class="html string">"有焦点，正在输入，样式一"</code> <code class="html plain">/&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">ul</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"associateWrap width348"</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"associateCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;这是一个词&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">li</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"associateCell"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code><code class="html plain">&gt;这是一段话&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">li</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">ul</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+            </div>
+			<h2>下拉控件扩展</h2>
+			<p>
+				扩展1：下拉菜单下面的二级菜单
+			</p>
+			<p>
+				扩展2：下拉菜单组的分割线
+			</p>
+			<p>
+				扩展3：带图标的下拉菜单（分左边、右边两种）
+			</p>
+			<p>
+				扩展4：下拉菜单的滚动条
+			</p>
+			</section>
+			<!-- Button Groups
+        ================================================== -->
+			<section id="btns">
+			<div class="page-header">
+				<h1>按钮</h1>
+				<p>
+					具体描述的word文档地址：<a href="assets/docs/web_controls/button.docx">
+					<img src="assets/img/docIcon.png" alt=""/>前端设计框架\docs\assets\docs\web_controls\button.docx</a><a href="assets/psd/button.psd"><img src="assets/img/psdIcon.png" alt=""/>psd文件已发布</a>
+				</p>
+               	<p>DEMO：<a href="downLoad/component.rar" title=""><img src="assets/img/rarIcon.png" alt="">component</a> 中btn.html</p>
+			</div>
+            <h2>使用方法</h2>
+				<p>
+					任何赋予
+					<code>.customBtn</code>类的页面元素都会显示按钮样式。不过，通常是用于更好的表现<code>&lt;a&gt;</code>页面元素。
+				</p>
+				<table class="table table-bordered table-striped" style="font-size:12px;">
+				<thead>
+				<tr>
+					<th>
+						按钮
+					</th>
+					<th>
+						class=""
+					</th>
+					<th>
+						描述
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>
+						<a href="" title="" class="customBtn colourGray1">次要</a>
+					</td>
+					<td>
+						<code>customBtn colourGray1</code>
+					</td>
+					<td>
+						页面不需要过度强调的次级按钮，如：是与否按钮，引导用户肯定，则“否”用次级按钮，“是”用主要按钮
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="" title="" class="customBtn colourGreen1">主要</a>
+					</td>
+					<td>
+						<code>customBtn colourGreen1</code>
+					</td>
+					<td>
+						页面主要功能的按钮；表示肯定，确定的按钮
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<a href="" title="" class="customBtn colourOrange1">警告</a>
+					</td>
+					<td>
+						<code>customBtn colourOrange1</code>
+					</td>
+					<td>
+						操作需要仔细考虑
+					</td>
+				</tr>
+                <tr>
+					<td>
+						<a href="" title="" class="customBtn colourRed1">危险</a>
+					</td>
+					<td>
+						<code>customBtn colourRed1</code>
+					</td>
+					<td>
+						操作会带来数据丢失或其它
+					</td>
+				</tr>
+				</tbody>
+				</table>
+				<h3>浏览器兼容性（css）</h3>
+				<p>
+					IE6,7,8不支持圆角,投影。IE不支持渐变。
+				</p>
+                <h3>按钮标签</h3>
+                <p style="font-size:12px;"><a href="" title="" class="customBtn colourGray1">按钮</a> 这是A标签写的按钮</p>
+                <p><input type="submit" class="customBtn colourGray1" value="按钮" /> 这是input标签写的按钮</p>
+				<h3>大小控制</h3>
+				<p>
+					想使用更大或更小的按钮吗？添加
+					<code>.customBtnLarge</code>、<code>.customBtnSmall</code> 或 <code>.customBtnMini</code>即可改变按钮大小。
+				</p>
+				<div class="bs-docs-example" style="font-size:12px;">
+					<p>
+						<a href="" title="" class="customBtnLarge colourGray1">大尺寸</a>　<a href="" title="" class="customBtn colourGray1">正常尺寸</a>　<a href="" title="" class="customBtnSmall colourGray1">小尺寸</a>　<a href="" title="" class="customBtnMini colourGray1">迷你尺寸</a>
+					</p>
+				</div>
+                <h3>按钮配色</h3>
+                <div class="bs-docs-example" style="font-size:12px;">
+                	<p>-----白------</p>
+                    <p><a href="" title="" class="customBtn colourWhite1">白色一</a>　　<code>.colourWhite1</code> 颜色样式</p>
+                    <p>&nbsp;</p>
+                    <p>-----灰------</p>
+                    <p><a href="" title="" class="customBtn colourGray1">灰色一</a>　　<code>.colourGray1</code></p>
+                    <p><a href="" title="" class="customBtnSmall colourGray2"><i class="icon_concernSign marginR3"></i>关注</a>　　<code>.colourGray2</code></p>
+                    <p>&nbsp;</p>
+                    <p>-----绿------</p>
+                    <p><a href="" title="" class="customBtn colourGreen1">绿色一</a>　　<code>.colourGreen1</code></p>
+                    <p><a href="" title="" class="customBtnSmall colourGreen2"><i class="icon_cancelConcernSign marginR3"></i></a>　　<code>.colourGreen2</code></p>
+                    <p>&nbsp;</p>
+                    <p>-----橙------</p>
+                    <p><a href="" title="" class="customBtn colourOrange1">橙色一</a>　　<code>.colourOrange1</code></p>
+                    <p>&nbsp;</p>
+                    <p>-----红------</p>
+                    <p><a href="" title="" class="customBtn colourRed1">红色一</a>　　<code>.colourRed1</code></p>
+                    <p>&nbsp;</p>
+                    <p>-----黄------</p>
+                    <p><a href="" title="" class="customBtn colourYellow1">黄色一</a>　　<code>.colourYellow1</code></p>
+                </div>
+                <div class="prettyprint linenums">
+                <table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter" style="word-break: break-all;"><div class="line number1 index0 alt2">&#8203;1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customBtn 这里放颜色样式"</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table>
+                </div>
+                <h3>按钮中加入图形元素。</h3>
+            <div class="bs-docs-example font12">
+            	<p>关注按钮</p>
+            	<a href="" title="" class="customBtnSmall colourGray2"><i class="icon_concernSign marginR3"></i>关注</a>
+                <p></p>
+                <p>已关注按钮，这里效果为：鼠标没移上去时文字是“已关注”，移上去后文字改变为“取消关注”。样式里实现了动态改变文字的效果。但是IE6,7不支持。</p>
+                <a href="" title="" class="customBtnSmall colourGreen2"><i class="icon_cancelConcernSign marginR3"></i></a>
+                <p></p>
+            </div>
+            <div class="prettyprint linenums">
+            	<table border="0" cellpadding="0" cellspacing="0" class="syntaxhighlighter  html"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customBtnSmall colourGray2"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_concernSign marginR3"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;关注&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">a</code> <code class="html color1">href</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">title</code><code class="html plain">=</code><code class="html string">""</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"customBtnSmall colourGreen2"</code><code class="html plain">&gt;&lt;</code><code class="html keyword">i</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"icon_cancelConcernSign marginR3"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">i</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">a</code><code class="html plain">&gt;</code></div>
+            	<div class="line number3 index2 alt2"></div></div></td></tr></tbody></table>
+            </div>
+			<p>
+			</p>
+			</section>
+		</div>
+	</div>
+</div>
+	<div class="footer">
+		<p>
+			版本 0.5（2013-10）
+			<a href="change_log.html">版本日志</a>
+			|
+			<a href="#">BUG反馈</a>
+			（指向BUG平台）
+				|
+			<a href="#">使用建议</a>
+			（指向BUG平台）
+		</p>
+	</div>
+<!-- Le javascript
+    ================================================== -->
+<!-- 侧边栏置顶悬浮的js -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/js/application.js"></script>
+<script src="assets/js/bootstrap-affix.js"></script>
+<script src="assets/js/bootstrap-dropdown.js"></script>
+<script src="assets/js/dropdownlist.js"></script>
+</body>
+</html>
